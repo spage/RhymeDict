@@ -37,7 +37,7 @@ while(<CMUDIC>){
 	if( /^[A-Z]/ ){
 		($word,$phones) = split /\s\s/;
 		$word =~ tr/A-Z/a-z/;
-		$word =~ tr/)(0-9//;
+		$word =~ tr/)(0-9//d;
 		# count syllables as vowel phones count (012 marks vowels)
 		$syllableCount = $phones =~ tr/012//;
 		# discard non-words and two-or-more syllable words
