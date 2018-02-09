@@ -29,6 +29,13 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 	#$groupName = join("\t", $grp, $groupCount, join(",", splice(@groupWords,0,3)));
 	$groupName = join("\t", $groupCount, $grp, join(",", @groupWords));
 	$groupRank{$groupName} = sprintf("%.12f",$freqSum);
+	$groupStat{$groupCount}++;
+}
+
+foreach my $grp (reverse sort {$a <=> $b} keys %groupStat){
+	$sum += $groupStat{$grp};
+	$wsum += $grp * $groupStat{$grp};
+	print join("\t", $grp, $groupStat{$grp}, $sum, $wsum) . "\n";
 }
 
 foreach my $grp (sort { $groupRank{$b} <=> $groupRank{$a} } keys %groupRank){
