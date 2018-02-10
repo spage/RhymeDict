@@ -101,6 +101,7 @@ coz
 cripe
 crosse
 cusk
+czar
 dace
 dahl
 dal
@@ -150,6 +151,7 @@ fer
 fess
 fisc
 fjeld
+fjord
 fleer
 floc
 foss
@@ -217,6 +219,7 @@ jess
 jo
 joss
 ka
+kahn
 kail
 kain
 karn
@@ -234,8 +237,10 @@ kir
 kirk
 kirn
 kluge
+klutz
 kohl
 koss
+kvetch
 kyte
 lac
 lall
@@ -340,7 +345,9 @@ pree
 prest
 pross
 prost
+psalm
 psi
+psych
 pung
 pur
 putsch
@@ -385,6 +392,7 @@ saul
 sault
 scad
 scarp
+schist
 schlepp
 schlock
 schmaltz
@@ -413,6 +421,7 @@ shew
 shiel
 shirr
 shive
+shmooze
 shoppe
 shott
 shri
@@ -437,6 +446,7 @@ speer
 speir
 speltz
 spence
+sphinx
 spitz
 spurge
 sri
@@ -453,6 +463,7 @@ strow
 stull
 stum
 sudd
+svelte
 sward
 swart
 swink
@@ -502,6 +513,7 @@ trone
 troth
 troy
 trull
+tsar
 turk
 umm
 un
@@ -511,6 +523,7 @@ veep
 vert
 vide
 vive
+vroom
 wark
 wat
 waugh
