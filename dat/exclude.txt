@@ -40,6 +40,7 @@ brach
 brae
 brank
 brant
+breadth
 bream
 brede
 bree
@@ -79,6 +80,7 @@ chert
 chez
 childe
 chon
+chook
 cinque
 cist
 cleek
@@ -98,6 +100,7 @@ coss
 coup
 cox
 coz
+creche
 cripe
 crosse
 cusk
@@ -113,6 +116,7 @@ deet
 del
 delft
 dengue
+depth
 dev
 dex
 dey
@@ -127,6 +131,7 @@ dore
 dorr
 doss
 dost
+doth
 dower
 dray
 drogue
@@ -139,6 +144,7 @@ durst
 eau
 eaux
 eide
+eighth
 el
 ell
 er
@@ -149,6 +155,9 @@ fane
 feck
 fer
 fess
+fifth
+filth
+firth
 fisc
 fjeld
 fjord
@@ -191,10 +200,13 @@ hake
 halm
 hao
 harl
+hath
 haugh
 haut
 haw
+hearth
 hebe
+heighth
 heil
 herl
 hern
@@ -219,7 +231,6 @@ jess
 jo
 joss
 ka
-khan
 kail
 kain
 karn
@@ -229,6 +240,7 @@ keef
 keir
 kent
 kerb
+khan
 khat
 kibbe
 kief
@@ -262,6 +274,7 @@ lin
 ling
 loge
 longe
+loth
 lotte
 lough
 loup
@@ -290,6 +303,7 @@ mensch
 merk
 merl
 merle
+meth
 mi
 mib
 mig
@@ -303,6 +317,7 @@ mo
 moke
 mol
 monde
+month
 mor
 mort
 mosk
@@ -321,6 +336,7 @@ nene
 ness
 nett
 neve
+ninth
 noh
 nom
 nth
@@ -338,6 +354,7 @@ perse
 phut
 phyle
 plack
+plinth
 plotz
 poh
 pointe
@@ -345,7 +362,6 @@ pree
 prest
 pross
 prost
-psalm
 psi
 psych
 pung
@@ -358,6 +374,7 @@ quai
 quale
 quin
 quire
+quoth
 raff
 rance
 rase
@@ -404,6 +421,7 @@ schtick
 schul
 scrod
 scud
+scythe
 seel
 seif
 sel
@@ -431,6 +449,7 @@ shute
 si
 sib
 sipe
+sixth
 skeen
 skene
 skoal
@@ -466,6 +485,7 @@ sudd
 svelte
 sward
 swart
+swath
 swink
 sylph
 syn
@@ -476,6 +496,7 @@ tao
 tass
 tel
 tench
+tenth
 tern
 tet
 tew
@@ -515,6 +536,7 @@ troy
 trull
 tsar
 turk
+twelfth
 umm
 un
 vang
@@ -525,6 +547,7 @@ vide
 vive
 vroom
 wark
+warmth
 wat
 waugh
 wecht
@@ -532,6 +555,7 @@ welsh
 wert
 whang
 wich
+width
 wiss
 wist
 withe
