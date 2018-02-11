@@ -28,12 +28,16 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 	undef @groupWords;
 	$freqSum = 0.0;
 	$groupCount = 0;
+	$prevWord = '';
 	foreach my $fword (reverse sort @{$phoneGroups{$grp}}){
 		($freq,$word) = split(/\t/, $fword);
-		$freqSum += $freq;
-		$groupCount++;
-		$wordGroups{$word}++;
-		push(@groupWords, $word) if (!exists $lookupStop{$word});
+		$freqSum += $freq;		
+		$wordGroups{$word}++;		
+		if (!exists $lookupStop{$word} && $word ne $prevWord){
+			push(@groupWords, $word);
+			$groupCount++;
+		}
+		$prevWord = $word;
 	}
 	#$groupName = join("\t", $grp, $groupCount, join(",", splice(@groupWords,0,3)));
 	$groupName = join("\t", $groupCount, $grp, join(",", @groupWords));

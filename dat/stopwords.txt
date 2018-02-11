@@ -1,7 +1,7 @@
 # non-child-appropriate, #sometimes
 # processing includes these words for stats, omits from output
+ass
 bitch
-boff
 cock
 coon
 cum
@@ -10,9 +10,15 @@ dick
 douche
 dyke
 fag
+fart
 fuck
+piss
+poop
+porn
 puss
+rape
 shit
 slut
 tit
 whore
+wuss
