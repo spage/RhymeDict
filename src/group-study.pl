@@ -24,6 +24,7 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 		($freq,$word) = split(/\t/, $fword);
 		$freqSum += $freq;
 		$groupCount++;
+		$wordGroups{$word}++;
 		push(@groupWords, $word) if (1);
 	}
 	#$groupName = join("\t", $grp, $groupCount, join(",", splice(@groupWords,0,3)));
@@ -39,7 +40,14 @@ foreach my $grp (reverse sort {$a <=> $b} keys %groupStat){
 }
 
 foreach my $grp (sort { $groupRank{$b} <=> $groupRank{$a} } keys %groupRank){
-	print join("\t", $groupRank{$grp}, $grp) . "\n";
+	$flag = '';
+	if($grp =~ /^1\t/){
+		($c,$p,$w) = split(/\t/,$grp);
+		if($wordGroups{$w}==1){
+			$flag = '*';
+		}
+	}
+	print join("\t", $groupRank{$grp}, $grp) . $flag . "\n";
 }
 # output groups by rank build group index
 # output group content separately
