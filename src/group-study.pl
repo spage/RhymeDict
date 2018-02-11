@@ -15,7 +15,7 @@ while(<DATASET>){
 }
 close(DATASET);
 
-# compute group name (top3) and group rank
+# gather groups and group rank
 foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroups){
 	undef @groupWords;
 	$freqSum = 0.0;
@@ -25,7 +25,7 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 		$freqSum += $freq;
 		$groupCount++;
 		$wordGroups{$word}++;
-		push(@groupWords, $word) if (1);
+		push(@groupWords, $word);
 	}
 	#$groupName = join("\t", $grp, $groupCount, join(",", splice(@groupWords,0,3)));
 	$groupName = join("\t", $groupCount, $grp, join(",", @groupWords));
@@ -33,21 +33,28 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 	$groupStat{$groupCount}++;
 }
 
+# create output dataset, check output dir exists
+use File::Path qw( make_path );
+if( !-d '../out') {
+	make_path('../out') || die "ERROR: Creating out path.";
+}
+open(STAT,'>../out/group-stats.txt');
+
 foreach my $grp (reverse sort {$a <=> $b} keys %groupStat){
 	$sum += $groupStat{$grp};
 	$wsum += $grp * $groupStat{$grp};
-	print join("\t", $grp, $groupStat{$grp}, $sum, $wsum) . "\n";
+	print STAT join("\t", $grp, $groupStat{$grp}, $sum, $wsum) . "\n";
 }
+close(STAT);
 
+open(GRP,'>../out/groups.txt');
+open(NGRP,'>../out/non-groups.txt');
 foreach my $grp (sort { $groupRank{$b} <=> $groupRank{$a} } keys %groupRank){
-	$flag = '';
-	if($grp =~ /^1\t/){
-		($c,$p,$w) = split(/\t/,$grp);
-		if($wordGroups{$w}==1){
-			$flag = '*';
-		}
-	}
-	print join("\t", $groupRank{$grp}, $grp) . $flag . "\n";
+	if($grp =~ /^[123]\t/){
+		print NGRP join("\t", $groupRank{$grp}, $grp) . "\n";
+	} else {
+		print GRP join("\t", $groupRank{$grp}, $grp) . "\n";
+	}	
 }
-# output groups by rank build group index
-# output group content separately
+close(NGRP);
+close(GRP);
