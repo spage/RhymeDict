@@ -31,8 +31,7 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 	$prevWord = '';
 	foreach my $fword (reverse sort @{$phoneGroups{$grp}}){
 		($freq,$word) = split(/\t/, $fword);
-		$freqSum += $freq;		
-		$wordGroups{$word}++;		
+		$freqSum += $freq;			
 		if (!exists $lookupStop{$word} && $word ne $prevWord){
 			push(@groupWords, $word);
 			$groupCount++;
@@ -62,6 +61,7 @@ close(STAT);
 open(GRP,'>../out/groups.txt');
 open(NGRP,'>../out/non-groups.txt');
 foreach my $grp (sort { $groupRank{$b} <=> $groupRank{$a} } keys %groupRank){
+	next if ($grp =~ /^0\t/);
 	if($grp =~ /^[123]\t/){
 		print NGRP join("\t", $groupRank{$grp}, $grp) . "\n";
 	} else {
