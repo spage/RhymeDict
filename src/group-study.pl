@@ -1,5 +1,14 @@
 # group study
 
+open(STOP,'<../dat/stopwords.txt') ||
+	die 'ERROR: stopwords dataset required';
+while(<STOP>){
+	chomp;
+	if( /^[a-z]/ ) { $lookupStop{$_}=1 }
+}
+close(STOP);
+
+
 # read from the filter dataset
 open(DATASET,'<../out/filter-dataset.txt') ||
 	die 'ERROR: filter dataset required';
@@ -8,7 +17,6 @@ while(<DATASET>){
 	chomp;
 	($freq,$word,$phones) = split /\t/;
 	
-
 	if( $phones =~ /(?<phone>[A-Z][A-Z][0-9][^0-9]*)$/ ){		
 		push @{$phoneGroups{$+{phone}}}, join("\t",$freq,$word);
 	}
@@ -25,7 +33,7 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 		$freqSum += $freq;
 		$groupCount++;
 		$wordGroups{$word}++;
-		push(@groupWords, $word);
+		push(@groupWords, $word) if (!exists $lookupStop{$word});
 	}
 	#$groupName = join("\t", $grp, $groupCount, join(",", splice(@groupWords,0,3)));
 	$groupName = join("\t", $groupCount, $grp, join(",", @groupWords));
