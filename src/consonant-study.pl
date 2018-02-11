@@ -1,4 +1,15 @@
-# consonant study
+# consonant study (TEMP)
+
+
+# load the homographs (words with multiple pronunciations, same spelling)
+open(HG,'<../out/homographs.txt') ||
+	die 'ERROR: homograph dataset required';
+while(<HG>){
+	chomp;
+	$homographs{$_}=1;
+}
+close(HG);
+
 
 # read from the filter dataset
 open(DATASET,'<../out/filter-dataset.txt') ||
@@ -8,17 +19,25 @@ while(<DATASET>){
 	chomp;
 	($freq,$word,$phones) = split /\t/;
 	
-
-	if( $word =~ /^(?<cblend>[^aeiouy]{2,4})[aeiouy]/ ){		
+	# extract consonant blend, special case for squ to simplify
+	if( $word !~ /^squ/ && $word =~ /^(?<cblend>[^aeiouy]{2,4})[aeiouy]/ ){		
 		$consonantBlends{$+{cblend}}++;
 	}
 
-	# of special interest
+	# qu blends of special interest
 	if( $word =~ /^qu/) { $consonantBlends{'qu'}++ }
+	if( $word =~ /^squ/) { $consonantBlends{'squ'}++ }
 }
 close(DATASET);
 
+# create output dataset, check output dir exists
+use File::Path qw( make_path );
+if( !-d '../out') {
+	make_path('../out') || die "ERROR: Creating out path.";
+}
+open(OUT,'>../out/consonants.txt');
 
 foreach my $cb (sort { $consonantBlends{$b} <=> $consonantBlends{$a} } keys %consonantBlends){
-	print join("\t",$cb,$consonantBlends{$cb}) . "\n";
+	print OUT join("\t",$cb,$consonantBlends{$cb}) . "\n";
 }
+close(OUT);
