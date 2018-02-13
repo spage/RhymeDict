@@ -1,5 +1,6 @@
-# consonant study (TEMP)
+#!perl build-merge-dataset.pl
 
+# consonant study (TEMP)
 
 # load the homographs (words with multiple pronunciations, same spelling)
 open(HG,'<../out/homographs.txt') ||

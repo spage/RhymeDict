@@ -1,3 +1,5 @@
+#!perl build-merge-dataset.pl
+
 # group study
 
 open(STOP,'<../dat/stopwords.txt') ||

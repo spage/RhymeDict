@@ -1,3 +1,5 @@
+#!perl build-merge-dataset.pl
+
 # word extract (TEMP)
 
 # create output dataset, check output dir exists
