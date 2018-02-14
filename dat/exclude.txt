@@ -38,6 +38,7 @@ bock
 bonne
 borne
 borsch
+borscht
 bort
 bortz
 bott
@@ -69,6 +70,7 @@ brugh
 brut
 buhl
 buhr
+bund
 bunn
 bur
 burd
@@ -124,6 +126,7 @@ cripe
 crosse
 crouse
 cruse
+current
 cusk
 czar
 dace
@@ -133,6 +136,7 @@ dal
 daube
 daw
 de
+deb
 dee
 deet
 del
@@ -164,12 +168,14 @@ duce
 durn
 durr
 durst
+dweeb
 eau
 eaux
 eide
 eighth
 el
 ell
+eng
 er
 erne
 ess
@@ -183,6 +189,7 @@ femme
 fer
 fess
 fete
+fez
 fifth
 fil
 filth
@@ -220,6 +227,7 @@ glace
 gook
 goy
 graham
+grebe
 griff
 grille
 grosz
@@ -283,11 +291,13 @@ kail
 kain
 kane
 karn
+karst
 kay
 kea
 keck
 keef
 keir
+kemp
 kent
 kerb
 khan
@@ -299,6 +309,7 @@ kip
 kir
 kirk
 kirn
+kirsch
 kist
 kluge
 klutz
@@ -308,6 +319,7 @@ kraft
 kvetch
 kyte
 lac
+laird
 lall
 lang
 lar
@@ -341,6 +353,7 @@ luce
 lum
 lunt
 lutz
+lymph
 mabe
 mache
 mae
@@ -411,6 +424,7 @@ oeuvre
 ort
 ose
 pac
+pah
 paik
 parr
 pash
@@ -431,6 +445,7 @@ plough
 poh
 pointe
 pol
+ponce 
 poon
 pree
 prest
@@ -633,6 +648,7 @@ troth
 trow
 troy
 trull
+trying
 tsar
 tung
 turk
