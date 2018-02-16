@@ -328,6 +328,7 @@ klutz
 kohl
 koss
 kraft
+kroon
 kvetch
 kyte
 lac
@@ -373,6 +374,7 @@ mae
 maile
 maim
 mair
+malm
 marc
 marge
 marque

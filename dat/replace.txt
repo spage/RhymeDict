@@ -10,22 +10,25 @@ been	B IH1 N	B EH1 N
 yeah	Y AE1	Y EH1
 
 
-# removes, perhaps legit but odd pronunciations
-# TODO: ADD REMOVE RULE, NO REPL
-nice	N IY1 S	N AY1 S
-lot	L AO1 T	L AA1 T
-awe	AA1	AO1
-law	L AA1	L AO1
-job	JH OW1 B	JH AA1 B
-most	M OW1 S	M OW1 S T
-drop	D R AO1 P	D R AA1 P
-top	T AO1 P	T AA1 P
-op	AO1 P	AA1 P
-get	G IH1 T	G EH1 T
-brooch	B R OW1 CH	B R UW1 CH
-been	B AH0 N	B EH1 N
-been	B IH0 N	B EH1 N
-our	AA1 R	AW1 R
-can	K AH0 N	K AE1 N
-than	DH AH0 N	DH AE1 N
-an	AH0 N	AE1 N
+# removes, odd pronunciations
+nice	N IY1 S
+lot	L AO1 T
+awe	AA1
+law	L AA1
+job	JH OW1 B
+most	M OW1 S
+drop	D R AO1 P
+top	T AO1 P
+op	AO1 P
+get	G IH1 T
+brooch	B R OW1 CH
+been	B AH0 N
+been	B IH0 N
+our	AA1 R
+can	K AH0 N
+than	DH AH0 N
+an	AH0 N
+next	N EH1 K S
+chalk	CH AA1 K
+caulk	K AA1 K
+walk	W AA1 K

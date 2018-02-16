@@ -24,6 +24,9 @@ while(<REPLACE>){
 	chomp;
 	if( /^[a-z]/ ) { 
 		($srcW,$srcP,$destP) = split /\t/;
+		if(!defined $destP){
+			$destP = '<REMOVE>';
+		}
 		$lookupReplace{join("\t",$srcW,$srcP)}=$destP;
 	}
 }
@@ -55,6 +58,7 @@ while(<DATASET>){
 
 	if(exists $lookupReplace{join("\t",$word,$phones)}) {		
 		$phones = $lookupReplace{join("\t",$word,$phones)};
+		next if( $phones eq '<REMOVE>');
 	}
 
 	print OUT join("\t",$freq,$word,$phones) . "\n";
