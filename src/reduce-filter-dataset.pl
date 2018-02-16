@@ -18,6 +18,17 @@ while(<EXCLUDE>){
 }
 close(EXCLUDE);
 
+open(REPLACE,'<../dat/replace.txt')||
+	die 'ERROR: replace dataset required';
+while(<REPLACE>){
+	chomp;
+	if( /^[a-z]/ ) { 
+		($srcW,$srcP,$destP) = split /\t/;
+		$lookupReplace{join("\t",$srcW,$srcP)}=$destP;
+	}
+}
+close(REPLACE);
+
 
 # create output dataset, check output dir exists
 use File::Path qw( make_path );
@@ -30,7 +41,6 @@ open(OUT,'>../out/filter-dataset.txt');
 open(DATASET,'<../out/merge-dataset.txt') ||
 	die 'ERROR: merge dataset required';
 while(<DATASET>){
-	$line = $_;
 	chomp;
 	($freq,$word,$phones) = split /\t/;
 
@@ -43,7 +53,11 @@ while(<DATASET>){
 	# strip out simple past tense -ed
 	next if ($word =~ /ed$/ && !exists $lookupInclude{$word});
 
-	print OUT $line;
+	if(exists $lookupReplace{join("\t",$word,$phones)}) {		
+		$phones = $lookupReplace{join("\t",$word,$phones)};
+	}
+
+	print OUT join("\t",$freq,$word,$phones) . "\n";
 }
 close(DATASET);
 close(OUT);
