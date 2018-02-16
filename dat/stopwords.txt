@@ -2,6 +2,7 @@
 # processing includes these words for stats, omits from output
 ass
 bitch
+boob
 cock
 coon
 cum
@@ -11,6 +12,7 @@ douche
 dyke
 fag
 fart
+fop
 fuck
 piss
 poop

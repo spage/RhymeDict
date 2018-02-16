@@ -36,6 +36,7 @@ boart
 boche
 bock
 bonne
+boor
 borne
 borsch
 borscht
@@ -87,11 +88,15 @@ carr
 carse
 carte
 cate
+caul
+celt
 cep
+chaise
 cham
 chang
 chao
 chasse
+chaw
 cheque
 chert
 chez
@@ -99,6 +104,7 @@ chi
 childe
 chon
 chook
+ciao
 cinque
 cirque
 cist
@@ -109,6 +115,7 @@ clough
 cobb
 cole
 combe
+conch
 conn
 conte
 coombe
@@ -132,6 +139,7 @@ czar
 dace
 dag
 dahl
+dais
 dal
 daube
 daw
@@ -230,6 +238,7 @@ graham
 grebe
 griff
 grille
+groat
 grosz
 grum
 gude
@@ -250,6 +259,7 @@ harl
 hath
 haugh
 haut
+haute
 haute
 haw
 hearth
@@ -283,6 +293,7 @@ jeez
 jess
 jill
 jo
+joe
 joss
 jun
 jus
@@ -292,6 +303,7 @@ kain
 kane
 karn
 karst
+kat
 kay
 kea
 keck
@@ -337,6 +349,7 @@ liang
 lich
 licht
 lief
+lieu
 lin
 ling
 linn
@@ -409,6 +422,7 @@ nam
 nance
 nard
 ne
+nee
 nene
 ness
 nett
@@ -432,6 +446,7 @@ peart
 pease
 pech
 perse
+phage
 phi
 phut
 phyle
@@ -465,6 +480,7 @@ qua
 quai
 quale
 quant
+quay
 quid
 quin
 quire
@@ -518,6 +534,7 @@ schmuck
 schnook
 schtick
 schul
+scot
 scrod
 scud
 scythe
@@ -692,6 +709,8 @@ wynn
 xi
 xu
 yang
+ye
+yeh
 yett
 yew
 yin
