@@ -1,4 +1,4 @@
-#!perl build-merge-dataset.pl
+#!perl group-study.pl
 
 # group study
 

@@ -1,4 +1,4 @@
-#!perl build-merge-dataset.pl
+#!perl name-study.pl
 
 # name study (TEMP)
 
@@ -38,7 +38,7 @@ while(<DATASET>){
 		$lookupGroups{$w}=1;
 		last;
 	}
-	print join("\t",$nm,@words) . "\n";
+	print join("\t",$nm,sort @words) . "\n";
 }
 close(DATASET);
 

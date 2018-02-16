@@ -2,6 +2,7 @@
 # processing includes these words for stats, omits from output
 ass
 bitch
+boff
 boob
 cock
 coon
