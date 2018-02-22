@@ -60,6 +60,28 @@ foreach my $grp (reverse sort {$a <=> $b} keys %groupStat){
 }
 close(STAT);
 
+open(ENDS,'>../out/group-ends.txt');
+foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroups){
+	undef @groupWords;
+	undef @groupEnds;
+	undef %ends;
+	$prevWord = '';
+	foreach my $fword (reverse sort @{$phoneGroups{$grp}}){
+		($freq,$word) = split(/\t/, $fword);
+		if ($word ne $prevWord){
+			push(@groupWords, $word);
+			$word =~ /(?<end>[aeiouy].+)$/;
+			$ends{'-'.$+{end}}++;
+		}
+		$prevWord = $word;
+	}
+	foreach my $end (sort { $ends{$b} <=> $ends{$a} } keys %ends){
+		push(@groupEnds, join(':', $end, $ends{$end}));
+	}
+	print ENDS join("\t", $grp, join(',',@groupWords), join(',',@groupEnds)) . "\n";
+}
+close(ENDS);
+
 open(GRP,'>../out/groups.txt');
 open(NGRP,'>../out/non-groups.txt');
 foreach my $grp (sort { $groupRank{$b} <=> $groupRank{$a} } keys %groupRank){
