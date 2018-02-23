@@ -11,6 +11,21 @@ while(<STOP>){
 close(STOP);
 
 
+open(CONS,'<../out/consonants.txt') ||
+	die 'ERROR: consonants dataset required';
+while(<CONS>){
+	chomp;
+	($cblend,undef) = split /\t/;
+	push(@preCons,$cblend);
+}
+push(@preCons, split(//,'bcdfghjklmnprstvwxyz'));
+close(CONS);
+
+#foreach my $c (@preCons){
+#	print "$c\n";
+#}
+
+
 # read from the filter dataset
 open(DATASET,'<../out/filter-dataset.txt') ||
 	die 'ERROR: filter dataset required';
