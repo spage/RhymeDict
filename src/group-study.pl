@@ -1,9 +1,11 @@
 #!perl group-study.pl
+use strict;
 
 # group study
 
 open(STOP,'<../dat/stopwords.txt') ||
 	die 'ERROR: stopwords dataset required';
+my %lookupStop;
 while(<STOP>){
 	chomp;
 	if( /^[a-z]/ ) { $lookupStop{$_}=1 }
@@ -13,10 +15,12 @@ close(STOP);
 
 open(CONS,'<../out/consonants.txt') ||
 	die 'ERROR: consonants dataset required';
+my %consonants;
+my @preCons;
 while(<CONS>){
 	chomp;
-	($cblend,undef) = split /\t/;
-	push(@preCons,$cblend);
+	(my $cblend, undef) = split /\t/;
+	push(@preCons, $cblend);
 }
 push(@preCons, split(//,'bcdfghjklmnprstvwxyz'));
 close(CONS);
@@ -29,10 +33,10 @@ close(CONS);
 # read from the filter dataset
 open(DATASET,'<../out/filter-dataset.txt') ||
 	die 'ERROR: filter dataset required';
+my %phoneGroups;
 while(<DATASET>){
-	$line = $_;
 	chomp;
-	($freq,$word,$phones) = split /\t/;
+	(my $freq, my $word, my $phones) = split /\t/;
 	
 	if( $phones =~ /(?<phone>[A-Z][A-Z][0-9][^0-9]*)$/ ){		
 		push @{$phoneGroups{$+{phone}}}, join("\t",$freq,$word);
@@ -41,13 +45,15 @@ while(<DATASET>){
 close(DATASET);
 
 # gather groups and group rank
+my %groupRank;
+my %groupStat;
 foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroups){
-	undef @groupWords;
-	$freqSum = 0.0;
-	$groupCount = 0;
-	$prevWord = '';
+	undef my @groupWords;
+	my $freqSum = 0.0;
+	my $groupCount = 0;
+	my $prevWord = '';
 	foreach my $fword (reverse sort @{$phoneGroups{$grp}}){
-		($freq,$word) = split(/\t/, $fword);
+		(my $freq, my $word) = split(/\t/, $fword);
 		$freqSum += $freq;			
 		if (!exists $lookupStop{$word} && $word ne $prevWord){
 			push(@groupWords, $word);
@@ -56,7 +62,7 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 		$prevWord = $word;
 	}
 	#$groupName = join("\t", $grp, $groupCount, join(",", splice(@groupWords,0,3)));
-	$groupName = join("\t", $groupCount, $grp, join(",", @groupWords));
+	my $groupName = join("\t", $groupCount, $grp, join(",", @groupWords));
 	$groupRank{$groupName} = sprintf("%.12f",$freqSum);
 	$groupStat{$groupCount}++;
 }
@@ -69,20 +75,20 @@ if( !-d '../out') {
 open(STAT,'>../out/group-stats.txt');
 
 foreach my $grp (reverse sort {$a <=> $b} keys %groupStat){
-	$sum += $groupStat{$grp};
-	$wsum += $grp * $groupStat{$grp};
+	my $sum += $groupStat{$grp};
+	my $wsum += $grp * $groupStat{$grp};
 	print STAT join("\t", $grp, $groupStat{$grp}, $sum, $wsum) . "\n";
 }
 close(STAT);
 
 open(ENDS,'>../out/group-ends.txt');
 foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroups){
-	undef @groupWords;
-	undef @groupEnds;
-	undef %ends;
-	$prevWord = '';
+	undef my @groupWords;
+	undef my @groupEnds;
+	undef my %ends;
+	my $prevWord = '';
 	foreach my $fword (reverse sort @{$phoneGroups{$grp}}){
-		($freq,$word) = split(/\t/, $fword);
+		(my $freq, my $word) = split(/\t/, $fword);
 		if ($word ne $prevWord){
 			push(@groupWords, $word);
 			$word =~ /(?<end>[aeiouy].+)$/;
@@ -93,7 +99,7 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 	foreach my $end (sort { $ends{$b} <=> $ends{$a} } keys %ends){
 		push(@groupEnds, join(':', $end, $ends{$end}));
 	}
-	print ENDS join("\t", $grp, join(',',@groupWords), join(',',@groupEnds)) . "\n";
+	print ENDS join("\t", $grp, join(',', @groupWords), join(',', @groupEnds)) . "\n";
 }
 close(ENDS);
 

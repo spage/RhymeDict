@@ -1,4 +1,5 @@
-#!perl build-merge-dataset.pl
+#!perl words-only.pl
+use strict;
 
 # word extract (TEMP)
 
@@ -13,9 +14,11 @@ open(HGO,'>../out/homographs.txt');
 # read from the filter dataset
 open(DATASET,'<../out/filter-dataset.txt') ||
 	die 'ERROR: filter dataset required';
+my %homographs;
+my %wordLookup;
 while(<DATASET>){	
 	chomp;
-	($freq,$word,$phones) = split /\t/;
+	(my $freq, my $word, my $phones) = split /\t/;
 	if(exists $wordLookup{$word}){
 		print HGO "$word\n" if (!exists $homographs{$word});
 		$homographs{$word}=1;

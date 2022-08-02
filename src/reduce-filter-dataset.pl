@@ -1,8 +1,10 @@
 #!perl reduce-filter-dataset.pl
+use strict;
 
 # read list of words to be included (keeps rules simple)
 open(INCLUDE,'<../dat/include.txt') ||
 	die 'ERROR: include dataset required';
+my %lookupInclude;
 while(<INCLUDE>){
 	chomp;
 	if( /^[a-z]/ ) { $lookupInclude{$_}=1 }
@@ -12,6 +14,7 @@ close(INCLUDE);
 # read list of words to be excluded (eliminates unworthy)
 open(EXCLUDE,'<../dat/exclude.txt') ||
 	die 'ERROR: exclude dataset required';
+my %lookupExclude;
 while(<EXCLUDE>){
 	chomp;
 	if( /^[a-z]/ ) { $lookupExclude{$_}=1 }
@@ -20,10 +23,11 @@ close(EXCLUDE);
 
 open(REPLACE,'<../dat/replace.txt')||
 	die 'ERROR: replace dataset required';
+my %lookupReplace;
 while(<REPLACE>){
 	chomp;
 	if( /^[a-z]/ ) { 
-		($srcW,$srcP,$destP) = split /\t/;
+		(my $srcW, my $srcP, my $destP) = split /\t/;
 		if(!defined $destP){
 			$destP = '<REMOVE>';
 		}
@@ -45,7 +49,7 @@ open(DATASET,'<../out/merge-dataset.txt') ||
 	die 'ERROR: merge dataset required';
 while(<DATASET>){
 	chomp;
-	($freq,$word,$phones) = split /\t/;
+	(my $freq, my $word, my $phones) = split /\t/;
 
 	# eliminate the unworthy
 	next if (exists $lookupExclude{$word});
@@ -56,12 +60,12 @@ while(<DATASET>){
 	# strip out simple past tense -ed
 	next if ($word =~ /ed$/ && !exists $lookupInclude{$word});
 
-	if(exists $lookupReplace{join("\t",$word,$phones)}) {		
-		$phones = $lookupReplace{join("\t",$word,$phones)};
+	if(exists $lookupReplace{join("\t", $word, $phones)}) {		
+		$phones = $lookupReplace{join("\t", $word, $phones)};
 		next if( $phones eq '<REMOVE>');
 	}
 
-	print OUT join("\t",$freq,$word,$phones) . "\n";
+	print OUT join("\t", $freq, $word, $phones) . "\n";
 }
 close(DATASET);
 close(OUT);
