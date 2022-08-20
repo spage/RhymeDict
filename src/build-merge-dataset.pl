@@ -22,6 +22,7 @@ close(WORDS);
 # process word additions
 my $wordsFileAdds = '../dat/enable1.adds.txt';
 if( -e $wordsFileAdds ){
+	#print "word.adds\n";
 	open(WORDS, "<$wordsFileAdds");
 	while(<WORDS>){
 		chomp;
@@ -41,7 +42,7 @@ open(COUNTS, '../ext/count_1w.txt') ||
 	die 'ERROR: external data files required, see readme.';
 while(<COUNTS>){
 	# limit to first 100000 words only
-	exit if $limit++ > 100000;
+	last if $limit++ > 100000;
 	chomp;
 	(my $word, my $count) = split /\s/;
 	if(exists $wordLookup{$word}){
@@ -55,6 +56,7 @@ close(COUNTS);
 # count addtions
 my $countFileAdds = '../dat/count.adds.txt';
 if( -e $countFileAdds ){
+	#print "count.adds\n";
 	open(WORDS, "<$countFileAdds");
 	while(<WORDS>){
 		chomp;
@@ -96,6 +98,7 @@ close(CMUDIC);
 # process dict additions
 my $dictFileAdds = '../dat/cmudict.adds.txt';
 if( -e $dictFileAdds ){
+	#print "cmu.adds\n";
 	open(WORDS, "<$dictFileAdds");
 	while(<WORDS>){
 		chomp;
