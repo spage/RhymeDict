@@ -66,24 +66,18 @@ while(<DATASET>){
 		$reasonCode = 'PRD_PLU_S';
 	}
 
-	if ($word =~ /[^s]s$/ && exists $lookupInclude{$word}){
-		$reasonCode = 'PRD_PLU_S_INC';
-	}
-
 	# strip out simple past tense -ed
 	if ($word =~ /ed$/ && !exists $lookupInclude{$word}){
 		$reasonCode = 'PRD_PST_ED';
 	}
 
-	if ($word =~ /ed$/ && exists $lookupInclude{$word}){
-		$reasonCode = 'PRD_PST_ED_INC';
-	}
-
 	# replace or remove word pronunciation
 	if(exists $lookupReplace{join("\t", $word, $phones)}) {		
-		$phones = $lookupReplace{join("\t", $word, $phones)};
-		if( $phones eq '<REMOVE>'){
+		my $phoneReplace = $lookupReplace{join("\t", $word, $phones)};
+		if( $phoneReplace eq '<REMOVE>'){
 			$reasonCode = 'PRD_PRON';
+		}else{
+			$phones = $phoneReplace;
 		}
 	}
 

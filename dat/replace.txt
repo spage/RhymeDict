@@ -1,34 +1,34 @@
 # replacements for pronunciations
-writhe	R IH1 TH	R AY1 TH
-sot	S AO1 T	S AA1 T
-snot	S N AO1 T	S N AA1 T
-raw	R AA1	R AO1
-naw	N AA1	N AO1
-synch	S IH1 N CH	S IH1 NG K
-mod	M AO1 	M AA1 D
 been	B IH1 N	B EH1 N
+mod	M AO1 	M AA1 D
+naw	N AA1	N AO1
+raw	R AA1	R AO1
+snot	S N AO1 T	S N AA1 T
+sot	S AO1 T	S AA1 T
+synch	S IH1 N CH	S IH1 NG K
+writhe	R IH1 TH	R AY1 TH
 yeah	Y AE1	Y EH1
 
 
 # removes, odd pronunciations
-nice	N IY1 S
-lot	L AO1 T
+an	AH0 N
 awe	AA1
-law	L AA1
-job	JH OW1 B
-most	M OW1 S
-drop	D R AO1 P
-top	T AO1 P
-op	AO1 P
-get	G IH1 T
-brooch	B R OW1 CH
 been	B AH0 N
 been	B IH0 N
-our	AA1 R
+brooch	B R OW1 CH
 can	K AH0 N
-than	DH AH0 N
-an	AH0 N
-next	N EH1 K S
-chalk	CH AA1 K
 caulk	K AA1 K
+chalk	CH AA1 K
+drop	D R AO1 P
+get	G IH1 T
+job	JH OW1 B
+law	L AA1
+lot	L AO1 T
+most	M OW1 S
+next	N EH1 K S
+nice	N IY1 S
+op	AO1 P
+our	AA1 R
+than	DH AH0 N
+top	T AO1 P
 walk	W AA1 K
