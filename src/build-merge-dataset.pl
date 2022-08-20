@@ -25,9 +25,11 @@ if( -e $wordsFileAdds ){
 	open(WORDS, "<$wordsFileAdds");
 	while(<WORDS>){
 		chomp;
-		my $w = $_;
-		$wordLookup{$w}=1;
-		push(@allWords, $w);	
+		if( /^[a-z]/ ){
+			my $w = $_;
+			$wordLookup{$w}=1;
+			push(@allWords, $w);
+		}	
 	}
 	close(WORDS);
 }
@@ -56,9 +58,11 @@ if( -e $countFileAdds ){
 	open(WORDS, "<$countFileAdds");
 	while(<WORDS>){
 		chomp;
-		(my $word, my $count) = split /\s/;	
-		my $freq = sprintf("%.12f",$count/1024908267229);
-		$freqLookup{$word} = $freq;
+		if( /^[a-z]/ ){
+			(my $word, my $count) = split /\s/;	
+			my $freq = sprintf("%.12f",$count/1024908267229);
+			$freqLookup{$word} = $freq;
+		}
 	}
 	close(WORDS);
 }
