@@ -54,6 +54,13 @@ while(<DATASET>){
 	chomp;
 	(my $freq, my $reasonCode, my $syb, my $word, my $phones) = split /\t/;
 
+	# one syllable
+	if($syb ne 'SYB_1'){
+		$reasonCode = 'PRD_SYB';
+		print OUT join("\t", $freq, $reasonCode, $syb, $word, $phones) . "\n";
+		next;
+	}
+
 	# eliminate the unworthy, manual edits
 	if (exists $lookupExclude{$word}){
 		$reasonCode = $lookupExclude{$word};
