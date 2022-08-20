@@ -17,7 +17,10 @@ open(EXCLUDE,'<../dat/exclude.txt') ||
 my %lookupExclude;
 while(<EXCLUDE>){
 	chomp;
-	if( /^[a-z]/ ) { $lookupExclude{$_}=1 }
+	if( /^[a-z]/ ) {
+		(my $exclude, my $reasonCode) = split /\t/;
+		$lookupExclude{$exclude}=$reasonCode; 
+	}
 }
 close(EXCLUDE);
 
@@ -49,23 +52,42 @@ open(DATASET,'<../out/merge-dataset.txt') ||
 	die 'ERROR: merge dataset required';
 while(<DATASET>){
 	chomp;
-	(my $freq, my $word, my $phones) = split /\t/;
+	(my $freq, my $reasonCode, my $syb, my $word, my $phones) = split /\t/;
 
-	# eliminate the unworthy
-	next if (exists $lookupExclude{$word});
-
-	# strip out plurals with -s
-	next if ($word =~ /[^s]s$/ && !exists $lookupInclude{$word});
-
-	# strip out simple past tense -ed
-	next if ($word =~ /ed$/ && !exists $lookupInclude{$word});
-
-	if(exists $lookupReplace{join("\t", $word, $phones)}) {		
-		$phones = $lookupReplace{join("\t", $word, $phones)};
-		next if( $phones eq '<REMOVE>');
+	# eliminate the unworthy, manual edits
+	if (exists $lookupExclude{$word}){
+		$reasonCode = $lookupExclude{$word};
 	}
 
-	print OUT join("\t", $freq, $word, $phones) . "\n";
+	# process rules, (includes simplify rule exceptions)
+
+	# strip out plurals with -s
+	if ($word =~ /[^s]s$/ && !exists $lookupInclude{$word}){
+		$reasonCode = 'PRD_PLU_S';
+	}
+
+	if ($word =~ /[^s]s$/ && exists $lookupInclude{$word}){
+		$reasonCode = 'PRD_PLU_S_INC';
+	}
+
+	# strip out simple past tense -ed
+	if ($word =~ /ed$/ && !exists $lookupInclude{$word}){
+		$reasonCode = 'PRD_PST_ED';
+	}
+
+	if ($word =~ /ed$/ && exists $lookupInclude{$word}){
+		$reasonCode = 'PRD_PST_ED_INC';
+	}
+
+	# replace or remove word pronunciation
+	if(exists $lookupReplace{join("\t", $word, $phones)}) {		
+		$phones = $lookupReplace{join("\t", $word, $phones)};
+		if( $phones eq '<REMOVE>'){
+			$reasonCode = 'PRD_PRON';
+		}
+	}
+
+	print OUT join("\t", $freq, $reasonCode, $syb, $word, $phones) . "\n";
 }
 close(DATASET);
 close(OUT);
