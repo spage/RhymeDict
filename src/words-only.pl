@@ -8,7 +8,12 @@ use File::Path qw( make_path );
 if( !-d '../out') {
 	make_path('../out') || die "ERROR: Creating out path.";
 }
+
+# each word only listed once
 open(OUT,'>../out/words.txt');
+
+# homographs are words spelled the same with multiple
+# pronunciations (bass-fish, bass-instrument)
 open(HGO,'>../out/homographs.txt');
 
 # read from the filter dataset
@@ -18,7 +23,8 @@ my %homographs;
 my %wordLookup;
 while(<DATASET>){	
 	chomp;
-	(my $freq, my $word, my $phones) = split /\t/;
+	(my $freq, my $reasonCode, my $syb, my $word, my $phones) = split /\t/;
+	next if ($reasonCode ne 'PRD_OK');
 	if(exists $wordLookup{$word}){
 		print HGO "$word\n" if (!exists $homographs{$word});
 		$homographs{$word}=1;
