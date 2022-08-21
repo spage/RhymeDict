@@ -55,7 +55,7 @@ while(<DATASET>){
 	(my $freq, my $reasonCode, my $syb, my $word, my $phones) = split /\t/;
 
 	# one syllable
-	if($syb ne 'SYB_1'){
+	if($reasonCode eq 'PRD_OK' && $syb ne 'SYB_1'){
 		$reasonCode = 'PRD_SYB';
 		print OUT join("\t", $freq, $reasonCode, $syb, $word, $phones) . "\n";
 		next;

@@ -6,9 +6,6 @@ my @allWords;
 my %wordLookup;
 my $wordsFile = '<../ext/enable1.txt';
 
-# comparative word list study
-#$wordsFile = '<../ext/word.list';
-
 open(WORDS, $wordsFile) || 
 	die 'ERROR: external data files required, see readme.';
 while(<WORDS>){
@@ -22,7 +19,6 @@ close(WORDS);
 # process word additions
 my $wordsFileAdds = '../dat/enable1.adds.txt';
 if( -e $wordsFileAdds ){
-	#print "word.adds\n";
 	open(WORDS, "<$wordsFileAdds");
 	while(<WORDS>){
 		chomp;
@@ -56,7 +52,6 @@ close(COUNTS);
 # count addtions
 my $countFileAdds = '../dat/count.adds.txt';
 if( -e $countFileAdds ){
-	#print "count.adds\n";
 	open(WORDS, "<$countFileAdds");
 	while(<WORDS>){
 		chomp;
@@ -98,7 +93,6 @@ close(CMUDIC);
 # process dict additions
 my $dictFileAdds = '../dat/cmudict.adds.txt';
 if( -e $dictFileAdds ){
-	#print "cmu.adds\n";
 	open(WORDS, "<$dictFileAdds");
 	while(<WORDS>){
 		chomp;
@@ -119,10 +113,6 @@ if( !-d '../out') {
 open(OUT,'>../out/merge-dataset.txt');
 
 
-#open(WORDS, $wordsFile);
-#while(@allWords){
-	#chomp;
-	#my $word = $_;
 foreach my $word (sort @allWords){	
 	my $reasonCode = 'PRD_OK';
 
@@ -150,30 +140,4 @@ foreach my $word (sort @allWords){
 	}
 
 }
-#close(WORDS);
-
-
-# filter, extend, reformat pronunciation dictionary
-##open(CMUDIC, '<../ext/cmudict-0.7b') || 
-##	die 'ERROR: external data files required, see readme.';
-##while(<CMUDIC>){
-##	chomp;
-##	if( /^[A-Z]/ ){
-##		(my $word, my $phones) = split /\s\s/;
-##		$word =~ tr/A-Z/a-z/;
-##		$word =~ tr/)(0-9//d;
-##		# count syllables as vowel phones count (012 marks vowels)
-##		my $syllableCount = $phones =~ tr/012//;
-##		# discard non-words and two-or-more syllable words
-##		if(exists $wordLookup{$word} && $syllableCount<2){
-##			# account for words missing freq data
-##			my $freq = $freqLookup{$word};
-##			if(!defined($freq)){
-##				$freq = "0.000000000001";
-##			}
-##			print OUT join("\t", $freq, $word, $phones) . "\n";
-##		}
-##	}
-##}
-##close(CMUDIC);
 close(OUT);
