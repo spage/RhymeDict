@@ -1,0 +1,6 @@
+TODO
+
+exclude reasons?
+wordB/words diff compare
+consB/consonants compare
+list consonant words with small groups decide whether to edit out!
