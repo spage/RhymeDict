@@ -20,8 +20,9 @@ open(DATASET,'<../out/filter-dataset.txt') ||
 	die 'ERROR: filter dataset required';
 while(<DATASET>){
 	chomp;
-	(my $freq, my $word, my $phones) = split /\t/;
-	
+	(my $freq, my $reasonCode, my $syb, my $word, my $phones) = split /\t/;
+	next if ($reasonCode ne 'PRD_OK');
+
 	# extract consonant blend, special case for squ to simplify
 	if( $word !~ /^squ/ && $word =~ /^(?<cblend>[^aeiouy]{2,4})[aeiouy]/ ){		
 		$consonantBlends{$+{cblend}}++;
