@@ -19,6 +19,7 @@ brooch	B R OW1 CH
 can	K AH0 N
 caulk	K AA1 K
 chalk	CH AA1 K
+current	K ER1 N T
 drop	D R AO1 P
 get	G IH1 T
 job	JH OW1 B
