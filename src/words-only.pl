@@ -26,12 +26,12 @@ while(<DATASET>){
 	(my $freq, my $reasonCode, my $syb, my $word, my $phones) = split /\t/;
 	next if ($reasonCode ne 'PRD_OK');
 	if(exists $wordLookup{$word}){
-		print HGO "$word\n" if (!exists $homographs{$word});
+		print HGO "$word\t" . join(':', $wordLookup{$word}, $phones) . "\n" if (!exists $homographs{$word});
 		$homographs{$word}=1;
 	} else {		
 		print OUT "$word\n";
 	}
-	$wordLookup{$word}=1;
+	$wordLookup{$word}=$phones;
 }
 close(DATASET);
 close(OUT);

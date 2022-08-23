@@ -9,7 +9,8 @@ open(HG,'<../out/homographs.txt') ||
 	die 'ERROR: homograph dataset required';
 while(<HG>){
 	chomp;
-	$homographs{$_}=1;
+	(my $word, undef) = split /\t/;
+	$homographs{$word}=1;
 }
 close(HG);
 

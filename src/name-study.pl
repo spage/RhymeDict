@@ -17,7 +17,8 @@ open(HG,'<../out/homographs.txt') ||
 my %lookupHg;
 while(<HG>){
 	chomp;
-	if( /^[a-z]/ ) { $lookupHg{$_}=1 }
+	(my $word, undef) = split /\t/;
+	if( /^[a-z]/ ) { $lookupHg{$word}=1 }
 }
 close(HG);
 
