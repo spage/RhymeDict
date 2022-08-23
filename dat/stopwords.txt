@@ -1,8 +1,6 @@
 # non-child-appropriate, #sometimes
 # processing includes these words for stats, omits from output
-ass
 bitch
-boff
 boob
 cock
 coon
@@ -13,11 +11,8 @@ douche
 dyke
 fag
 fart
-fop
 fuck
 piss
-poop
-porn
 puss
 rape
 shit

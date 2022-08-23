@@ -1,6 +1,6 @@
 # replacements for pronunciations
 been	B IH1 N	B EH1 N
-mod	M AO1 	M AA1 D
+mod	M AO1 D 	M AA1 D
 naw	N AA1	N AO1
 raw	R AA1	R AO1
 snot	S N AO1 T	S N AA1 T
