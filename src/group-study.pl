@@ -36,7 +36,8 @@ open(DATASET,'<../out/filter-dataset.txt') ||
 my %phoneGroups;
 while(<DATASET>){
 	chomp;
-	(my $freq, my $word, my $phones) = split /\t/;
+	(my $freq, my $reasonCode, my $syb, my $word, my $phones) = split /\t/;
+	next if ($reasonCode ne 'PRD_OK');
 	
 	if( $phones =~ /(?<phone>[A-Z][A-Z][0-9][^0-9]*)$/ ){		
 		push @{$phoneGroups{$+{phone}}}, join("\t",$freq,$word);
