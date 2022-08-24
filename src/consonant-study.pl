@@ -3,18 +3,6 @@ use strict;
 
 # consonant study (TEMP)
 
-# load the homographs (words with multiple pronunciations, same spelling)
-my %homographs;
-open(HG,'<../out/homographs.txt') ||
-	die 'ERROR: homograph dataset required';
-while(<HG>){
-	chomp;
-	(my $word, undef) = split /\t/;
-	$homographs{$word}=1;
-}
-close(HG);
-
-
 # read from the filter dataset
 my %consonantBlends;
 open(DATASET,'<../out/filter-dataset.txt') ||
