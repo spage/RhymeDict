@@ -81,6 +81,8 @@ while(<CMUDIC>){
 		if(exists $wordLookup{$word} ){
 			# append pronunciation
 			if(exists $phoneLookup{$word}){
+				#TODO: replace this if with code from group study below
+				#push @{$phoneLookup{$word}}, $phones
 				$phoneLookup{$word} = $phoneLookup{$word} . ':' . $phones;
 			}else{
 				$phoneLookup{$word} = $phones;
@@ -132,6 +134,8 @@ foreach my $word (sort @allWords){
 	# write each pronunciation on its own line
 	if($reasonCode eq 'PRD_OK'){
 		foreach my $phone (split(':',$phones)){
+		#TODO replace above with code from group
+		#foreach my $phone (@{$phoneLookup{$word}})
 			# count syllables as vowel phones count (012 marks vowels)
 			my $syllableCount = $phone =~ tr/012//;
 			my $syb = 'SYB_' . $syllableCount;
