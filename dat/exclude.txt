@@ -12,7 +12,6 @@ baize	PRD_EXCL
 bal	PRD_EXCL
 barbe	PRD_EXCL
 barre	PRD_EXCL
-basque	PRD_EXCL_PROPN
 bast	PRD_EXCL
 bate	PRD_EXCL
 batt	PRD_EXCL
@@ -651,7 +650,6 @@ wark	PRD_EXCL
 wat	PRD_EXCL
 waugh	PRD_EXCL
 wecht	PRD_EXCL
-welsh	PRD_EXCL_PROPN
 wert	PRD_EXCL
 whang	PRD_EXCL_ALTSP
 whig	PRD_EXCL_ALTSP
