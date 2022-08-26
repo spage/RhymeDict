@@ -30,7 +30,7 @@ close(CONS);
 #}
 
 
-# read from the filter dataset
+# read from the filter dataset, build phone groups
 open(DATASET,'<../out/filter-dataset.txt') ||
 	die 'ERROR: filter dataset required';
 my %phoneGroups;
@@ -93,7 +93,14 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 		if ($word ne $prevWord){
 			push(@groupWords, $word);
 			$word =~ /(?<end>[aeiouy].+)$/;
-			$ends{'-'.$+{end}}++;
+			my $end = $+{end};
+			if( $word =~ /^s?qu/ ){
+				#squ qu special case, ignore u
+				$ends{'-'. substr($end,1)}++;
+			}else{
+				$ends{'-'. $end}++;
+			}
+			
 		}
 		$prevWord = $word;
 	}
