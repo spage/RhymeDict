@@ -258,6 +258,8 @@ herm	PRD_EXCL
 hern	PRD_EXCL
 heth	PRD_EXCL
 hight	PRD_EXCL
+hm	PRD_EXCL_SND
+hmm	PRD_EXCL_SND
 hoar	PRD_EXCL
 hogg	PRD_EXCL_PROPN
 hoke	PRD_EXCL
@@ -449,6 +451,7 @@ psi	PRD_EXCL_FRN
 pugh	PRD_EXCL
 pung	PRD_EXCL
 pur	PRD_EXCL
+puss	PRD_EXCL_VULGAR
 putsch	PRD_EXCL_FRN
 putz	PRD_EXCL_FRN
 pye	PRD_EXCL

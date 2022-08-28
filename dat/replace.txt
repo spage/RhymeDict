@@ -11,12 +11,8 @@ yeah	Y AE1	Y EH1
 
 
 # removes, odd pronunciations
-an	AH0 N
 awe	AA1
-been	B AH0 N
-been	B IH0 N
 brooch	B R OW1 CH
-can	K AH0 N
 caulk	K AA1 K
 chalk	CH AA1 K
 current	K ER1 N T
@@ -30,6 +26,6 @@ next	N EH1 K S
 nice	N IY1 S
 op	AO1 P
 our	AA1 R
-than	DH AH0 N
 top	T AO1 P
+uh	UH1
 walk	W AA1 K

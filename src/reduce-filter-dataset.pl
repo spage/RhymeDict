@@ -79,13 +79,19 @@ while(<DATASET>){
 	}
 
 	# replace or remove word pronunciation
-	if(exists $lookupReplace{join("\t", $word, $phones)}) {		
+	if(exists $lookupReplace{join("\t", $word, $phones)}){		
 		my $phoneReplace = $lookupReplace{join("\t", $word, $phones)};
 		if( $phoneReplace eq '<REMOVE>'){
 			$reasonCode = 'PRD_PRON';
 		}else{
 			$phones = $phoneReplace;
 		}
+	}
+
+	# remove unaccented vowels (these are undesirable alternate)
+	if($reasonCode eq 'PRD_OK' && $phones =~ /[AEIOU][A-Z]0/){
+		print "!!$word\t$phones\n";
+		$reasonCode = 'PRD_PRON_0';
 	}
 
 	print OUT join("\t", $freq, $reasonCode, $syb, $word, $phones) . "\n";

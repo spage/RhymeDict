@@ -65,9 +65,6 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 		$prevWord = $word;
 	}
 
-	if( $groupCount == 0){
-		print "ZERO:$grp\n";
-	}
 
 	#$groupName = join("\t", $grp, $groupCount, join(",", splice(@groupWords,0,3)));
 	my $groupName = join("\t", $groupCount, $grp, join(",", @groupWords));
@@ -106,11 +103,6 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 			$word =~ /(?<end>[aeiouy].*)$/;
 			my $end = $+{end};
 
-			if( $end =~ /^$/ ){
-				print "NEND:$word\n";
-			}
-
-
 			if( $word =~ /^s?qu/ ){
 				#squ qu special case, ignore u
 				$ends{'-'. substr($end,1)}++;
@@ -129,14 +121,14 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 close(ENDS);
 
 open(GRP,'>../out/groups.txt');
-open(NGRP,'>../out/non-groups.txt');
+#open(NGRP,'>../out/non-groups.txt');
 foreach my $grp (sort { $groupRank{$b} <=> $groupRank{$a} } keys %groupRank){
-	next if ($grp =~ /^0\t/);
-	if($grp =~ /^[123]\t/){
-		print NGRP join("\t", $groupRank{$grp}, $grp) . "\n";
-	} else {
+	#next if ($grp =~ /^0\t/);
+	#if($grp =~ /^[123]\t/){
+	#	print NGRP join("\t", $groupRank{$grp}, $grp) . "\n";
+	#} else {
 		print GRP join("\t", $groupRank{$grp}, $grp) . "\n";
-	}	
+	#}	
 }
-close(NGRP);
+#close(NGRP);
 close(GRP);
