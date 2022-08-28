@@ -39,15 +39,17 @@ while(<DATASET>){
 	(my $freq, my $reasonCode, my $syb, my $word, my $phones) = split /\t/;
 	next if ($reasonCode ne 'PRD_OK');
 	
+	# this expression grabs the last vowel sound to the end of the phones
 	if( $phones =~ /(?<phone>[A-Z][A-Z][0-9][^0-9]*)$/ ){		
 		push @{$phoneGroups{$+{phone}}}, join("\t",$freq,$word);
 	}
 }
 close(DATASET);
 
+
 # gather groups and group rank
 my %groupRank;
-my %groupStat;
+my %groupOccurs;
 foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroups){
 	undef my @groupWords;
 	my $freqSum = 0.0;
@@ -62,10 +64,15 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 		}
 		$prevWord = $word;
 	}
+
+	if( $groupCount == 0){
+		print "ZERO:$grp\n";
+	}
+
 	#$groupName = join("\t", $grp, $groupCount, join(",", splice(@groupWords,0,3)));
 	my $groupName = join("\t", $groupCount, $grp, join(",", @groupWords));
 	$groupRank{$groupName} = sprintf("%.12f",$freqSum);
-	$groupStat{$groupCount}++;
+	$groupOccurs{$groupCount}++;
 }
 
 # create output dataset, check output dir exists
@@ -73,14 +80,18 @@ use File::Path qw( make_path );
 if( !-d '../out') {
 	make_path('../out') || die "ERROR: Creating out path.";
 }
-open(STAT,'>../out/group-stats.txt');
 
-foreach my $grp (reverse sort {$a <=> $b} keys %groupStat){
-	my $sum += $groupStat{$grp};
-	my $wsum += $grp * $groupStat{$grp};
-	print STAT join("\t", $grp, $groupStat{$grp}, $sum, $wsum) . "\n";
+
+# prepare group stats
+open(STAT,'>../out/group-stats.txt');
+my $sum = 0;
+foreach my $groupCount (reverse sort {$a <=> $b} keys %groupOccurs){
+	my $wordCount += $groupCount * $groupOccurs{$groupCount};
+	$sum += $wordCount;
+	print STAT join("\t", $groupCount, $groupOccurs{$groupCount}, $wordCount, $sum) . "\n";
 }
 close(STAT);
+
 
 open(ENDS,'>../out/group-ends.txt');
 foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroups){
@@ -92,8 +103,14 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 		(my $freq, my $word) = split(/\t/, $fword);
 		if ($word ne $prevWord){
 			push(@groupWords, $word);
-			$word =~ /(?<end>[aeiouy].+)$/;
+			$word =~ /(?<end>[aeiouy].*)$/;
 			my $end = $+{end};
+
+			if( $end =~ /^$/ ){
+				print "NEND:$word\n";
+			}
+
+
 			if( $word =~ /^s?qu/ ){
 				#squ qu special case, ignore u
 				$ends{'-'. substr($end,1)}++;
