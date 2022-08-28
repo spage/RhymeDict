@@ -90,7 +90,6 @@ while(<DATASET>){
 
 	# remove unaccented vowels (these are undesirable alternate)
 	if($reasonCode eq 'PRD_OK' && $phones =~ /[AEIOU][A-Z]0/){
-		print "!!$word\t$phones\n";
 		$reasonCode = 'PRD_PRON_0';
 	}
 
