@@ -100,7 +100,7 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 		(my $freq, my $word) = split(/\t/, $fword);
 		if ($word ne $prevWord){
 			push(@groupWords, $word);
-			$word =~ /(?<end>[aeiouy].*)$/;
+			$word =~ /(?<end>(([aeiou].*)|(y[^aeiou]*)))$/;
 			my $end = $+{end};
 
 			if( $word =~ /^s?qu/ ){
