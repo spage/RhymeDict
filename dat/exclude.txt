@@ -2,6 +2,7 @@ ae	PRD_EXCL
 ag	PRD_EXCL
 ai	PRD_EXCL
 al	PRD_EXCL
+alt	PRD_EXCL
 ane	PRD_EXCL
 ar	PRD_EXCL
 arb	PRD_EXCL
@@ -17,6 +18,7 @@ bate	PRD_EXCL
 batt	PRD_EXCL
 beaux	PRD_EXCL_FRN
 benne	PRD_EXCL
+berg	PRD_EXCL
 beth	PRD_EXCL
 bey	PRD_EXCL
 bibb	PRD_EXCL
@@ -73,6 +75,7 @@ bund	PRD_EXCL_FRN
 bunn	PRD_EXCL
 bur	PRD_EXCL
 burd	PRD_EXCL
+burg	PRD_EXCL_FRN
 burke	PRD_EXCL_FRN
 burse	PRD_EXCL
 buss	PRD_EXCL
@@ -131,7 +134,6 @@ crosse	PRD_EXCL
 crouse	PRD_EXCL
 cruse	PRD_EXCL
 cusk	PRD_EXCL
-czar	PRD_EXCL_ALTSP
 dace	PRD_EXCL
 dag	PRD_EXCL
 dahl	PRD_EXCL_PROPN
@@ -439,7 +441,7 @@ plough	PRD_EXCL
 poh	PRD_EXCL
 pointe	PRD_EXCL_ALTSP
 pol	PRD_EXCL
-ponce 	PRD_EXCL_PROPN
+ponce	PRD_EXCL_PROPN
 poon	PRD_EXCL
 pree	PRD_EXCL
 prest	PRD_EXCL
@@ -632,7 +634,6 @@ trow	PRD_EXCL
 troy	PRD_EXCL_PROPN
 trull	PRD_EXCL
 trying	PRD_EXCL
-tsar	PRD_EXCL_FRN
 tung	PRD_EXCL
 turk	PRD_EXCL_PROPN
 tye	PRD_EXCL

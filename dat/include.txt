@@ -4,6 +4,7 @@ bus
 corps
 dais
 dis
+does
 gas
 has
 his
@@ -11,6 +12,7 @@ is
 jus
 pus
 sous
+twas
 us
 was
 yes
