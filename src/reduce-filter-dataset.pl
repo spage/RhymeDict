@@ -53,6 +53,21 @@ open(DATASET,'<../out/merge-dataset.txt') ||
 while(<DATASET>){
 	chomp;
 	(my $freq, my $reasonCode, my $syb, my $word, my $phones) = split /\t/;
+	
+	# replace or remove word pronunciation
+	if(exists $lookupReplace{join("\t", $word, $phones)}){		
+		my $phoneReplace = $lookupReplace{join("\t", $word, $phones)};
+		if( $phoneReplace eq '<REMOVE>'){
+			$reasonCode = 'PRD_PRON';
+			print OUT join("\t", $freq, $reasonCode, $syb, $word, $phones) . "\n";
+			next;
+		}else{
+			$phones = $phoneReplace;
+			# redo syb count just in case (re:duel)
+			my $syllableCount = $phones =~ tr/012//;
+			$syb = 'SYB_' . $syllableCount;
+		}
+	}
 
 	# one syllable
 	if($reasonCode eq 'PRD_OK' && $syb ne 'SYB_1'){
