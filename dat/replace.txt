@@ -4,6 +4,7 @@ beige	B EY1 ZH	B EY1 JH
 blotch	B L AA1 T CH	B L AA1 CH
 duel	D UW1 AH0 L	D UW1 L
 floss	F L AA1 S	F L AO1 S
+fop	F AO1 P	F AA1 P
 goth	G AA1 TH	G AO1 TH
 hoss	H AA1 S	H AO1 S
 mod	M AO1 D 	M AA1 D
@@ -37,7 +38,7 @@ current	K ER1 N T
 dong	D AO1 NG G
 drop	D R AO1 P
 get	G IH1 T
-golf	G AO1 L F	
+golf	G AO1 L F
 job	JH OW1 B
 law	L AA1
 lot	L AO1 T
@@ -52,4 +53,5 @@ top	T AO1 P
 uh	UH1
 vase	V AA1 Z
 walk	W AA1 K
+want	W AA1 N T
 with	W IH1 DH
