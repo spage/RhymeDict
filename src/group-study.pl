@@ -50,7 +50,7 @@ close(DATASET);
 # gather groups and group rank
 my %groupRank;
 my %groupOccurs;
-foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroups){
+foreach my $grp (sort keys %phoneGroups){
 	undef my @groupWords;
 	my $freqSum = 0.0;
 	my $groupCount = 0;
@@ -91,7 +91,7 @@ close(STAT);
 
 
 open(ENDS,'>../out/group-ends.txt');
-foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroups){
+foreach my $grp (sort keys %phoneGroups){
 	undef my @groupWords;
 	undef my @groupEnds;
 	undef my %ends;
@@ -113,7 +113,7 @@ foreach my $grp (sort { $phoneGroups{$b} <=> $phoneGroups{$a} } keys %phoneGroup
 		}
 		$prevWord = $word;
 	}
-	foreach my $end (sort { $ends{$b} <=> $ends{$a} } keys %ends){
+	foreach my $end (sort keys %ends){
 		push(@groupEnds, join(':', $end, $ends{$end}));
 	}
 	print ENDS join("\t", $grp, join(',', @groupWords), join(',', @groupEnds)) . "\n";
