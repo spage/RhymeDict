@@ -2,11 +2,17 @@
 been	B IH1 N	B EH1 N
 beige	B EY1 ZH	B EY1 JH
 blotch	B L AA1 T CH	B L AA1 CH
+duel	D UW1 AH0 L	D UW1 L
+floss	F L AA1 S	F L AO1 S
+goth	G AA1 TH	G AO1 TH
+hoss	H AA1 S	H AO1 S
 mod	M AO1 D 	M AA1 D
 naw	N AA1	N AO1
 raw	R AA1	R AO1
+salve	S AA1 V	S AE1 V
 snot	S N AO1 T	S N AA1 T
 sot	S AO1 T	S AA1 T
+swath	S W AA1 TH	S W AO1 TH
 synch	S IH1 N CH	S IH1 NG K
 wank	W AA1 NG K	W AE1 NG K
 was	W AA1 Z	W AH1 Z
@@ -19,6 +25,8 @@ as	EH1 Z
 awe	AA1
 balk	B AA1 L K
 balm	B AA1 M
+bomb	B AO1 M
+boss	B AA1 S
 brooch	B R OW1 CH
 calm	K AA1 M
 caught	K AA1 T
@@ -26,9 +34,10 @@ caulk	K AA1 K
 cause	K AA1 Z
 chalk	CH AA1 K
 current	K ER1 N T
-dong	AO1 NG G
+dong	D AO1 NG G
 drop	D R AO1 P
 get	G IH1 T
+golf	G AO1 L F	
 job	JH OW1 B
 law	L AA1
 lot	L AO1 T
