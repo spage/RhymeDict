@@ -93,16 +93,6 @@ while(<DATASET>){
 		$reasonCode = 'PRD_PST_ED';
 	}
 
-	# replace or remove word pronunciation
-	if(exists $lookupReplace{join("\t", $word, $phones)}){		
-		my $phoneReplace = $lookupReplace{join("\t", $word, $phones)};
-		if( $phoneReplace eq '<REMOVE>'){
-			$reasonCode = 'PRD_PRON';
-		}else{
-			$phones = $phoneReplace;
-		}
-	}
-
 	# remove unaccented vowels (these are undesirable alternate)
 	if($reasonCode eq 'PRD_OK' && $phones =~ /[AEIOU][A-Z]0/){
 		$reasonCode = 'PRD_PRON_0';
