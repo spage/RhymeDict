@@ -99,7 +99,12 @@ foreach my $grp (sort keys %phoneGroups){
 	foreach my $fword (reverse sort @{$phoneGroups{$grp}}){
 		(my $freq, my $word) = split(/\t/, $fword);
 		if ($word ne $prevWord){
-			push(@groupWords, $word);
+			#mark stopwords, TEMP?
+			my $stopmark = '';
+			if($lookupStop{$word}){
+				$stopmark = '*';
+			}
+			push(@groupWords, $word . $stopmark);
 			$word =~ /(?<end>(([aeiou].*)|(y[^aeiou]*)))$/;
 			my $end = $+{end};
 
