@@ -1,6 +1,11 @@
 TODO
 
-exclude reasons?
-wordB/words diff compare
-consB/consonants compare
+first pass edits complete
+
+integrate name selection
+remove 1 from phonemes
+build final group file (merge groups, group-ends, names, remove cumm freq)
+
+create page documents
+
 list consonant words with small groups decide whether to edit out!
