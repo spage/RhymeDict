@@ -85,17 +85,11 @@ retch	37821
 rile	65418
 rill	96136
 roil	37402
-schlep	27556
-schmooze	62246
-schtick	94462
-schwa	64634
 scrimp	25301
 scrounge	57209
 scrunch	46703
 seethe	42974
 sext	63263
-shlock	31022
-schtick	97310
 skulk	24018
 slake	54463
 slosh	51634

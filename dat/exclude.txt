@@ -134,6 +134,7 @@ crosse	PRD_EXCL
 crouse	PRD_EXCL
 cruse	PRD_EXCL
 cusk	PRD_EXCL
+czar	PRD_EXCL_CBL
 dace	PRD_EXCL
 dag	PRD_EXCL
 dahl	PRD_EXCL_PROPN
@@ -313,7 +314,9 @@ kirk	PRD_EXCL_PROPN
 kirn	PRD_EXCL
 kirsch	PRD_EXCL
 kist	PRD_EXCL
+kludge	PRD_EXCL_CBL
 kluge	PRD_EXCL
+klutz	PRD_EXCL_CBL
 kohl	PRD_EXCL
 koss	PRD_EXCL
 kraft	PRD_EXCL_PROPN
@@ -507,10 +510,13 @@ sault	PRD_EXCL
 scad	PRD_EXCL
 scarp	PRD_EXCL
 schist	PRD_EXCL
+schlep	PRD_EXCL_CBL
 schlepp	PRD_EXCL_FRN
+schtick	PRD_EXCL_CBL
 schlock	PRD_EXCL_FRN
 schmaltz	PRD_EXCL_FRN
 schmalz	PRD_EXCL_FRN
+schmooze	PRD_EXCL_CBL
 schmuck	PRD_EXCL_FRN
 schnook	PRD_EXCL_FRN
 schul	PRD_EXCL_FRN
@@ -539,6 +545,7 @@ shew	PRD_EXCL
 shiel	PRD_EXCL
 shirr	PRD_EXCL
 shive	PRD_EXCL
+shlock	PRD_EXCL_CBL
 shoppe	PRD_EXCL_ALTSP
 shott	PRD_EXCL_PROPN
 shri	PRD_EXCL_FRN

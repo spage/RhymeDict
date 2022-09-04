@@ -86,6 +86,7 @@ strength	S T R EH1 NG K TH
 swamp	S W AO1 M P
 tang	T AA1 NG
 top	T AO1 P
+tsar	T S AA1 R
 uh	UH1
 vase	V AA1 Z
 walk	W AA1 K
