@@ -21,7 +21,7 @@ hon	HH AA1 N	HH AH1 N
 hoss	HH AA1 S	HH AO1 S
 lithe	L AY1 DH	L AY1 TH
 mensch	M EH1 N SH	M EH1 N CH
-mod	M AO1 D 	M AA1 D
+mod	M AO1 D	M AA1 D
 naw	N AA1	N AO1
 poor	P UW1 R	P AO1 R
 raw	R AA1	R AO1
