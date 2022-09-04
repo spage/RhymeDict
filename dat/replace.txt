@@ -1,24 +1,50 @@
 # replacements for pronunciations
+ankh	AE1 N K	AO1 NG K
 been	B IH1 N	B EH1 N
 beige	B EY1 ZH	B EY1 JH
+blithe	B L AY1 DH	B L AY1 TH
 blotch	B L AA1 T CH	B L AA1 CH
+bong	B AA1 NG	B AO1 NG
+bonk	B AA1 NG K	B AO1 NG K
+conk	K AA1 NG K	K AO1 NG K
+corps	K AO1 R Z	K AO1 R
 duel	D UW1 AH0 L	D UW1 L
+ear	IY1 R	IH1 R
 floss	F L AA1 S	F L AO1 S
+fob	F AO1 B	F AA1 B
+font	F AA1 N T	F AO1 N T
 fop	F AO1 P	F AA1 P
 goth	G AA1 TH	G AO1 TH
-hoss	H AA1 S	H AO1 S
+here	HH IY1 R	HH IH1 R
+hear	HH IY1 R	HH IH1 R
+hon	HH AA1 N	HH AH1 N
+hoss	HH AA1 S	HH AO1 S
+lithe	L AY1 DH	L AY1 TH
+mensch	M EH1 N SH	M EH1 N CH
 mod	M AO1 D 	M AA1 D
 naw	N AA1	N AO1
+poor	P UW1 R	P AO1 R
 raw	R AA1	R AO1
+rouge	R UW1 ZH	R UW1 JH
 salve	S AA1 V	S AE1 V
+seer	S IY1 R	S IH1 R
 snot	S N AO1 T	S N AA1 T
 sot	S AO1 T	S AA1 T
 swath	S W AA1 TH	S W AO1 TH
 synch	S IH1 N CH	S IH1 NG K
+tempt	T EH1 M P T	T EH1 M T
+the	DH IY0	DH IY1
+thunk	TH AH1 N K	TH AH1 NG K
+tier	T IY1 R	T IH1 R
+tithe	T AY1 DH	T AY1 TH
+twang	T W AA1 NG	T W AE1 NG
 wank	W AA1 NG K	W AE1 NG K
+weir	W IY1 R	W IH1 R
 was	W AA1 Z	W AH1 Z
+wonk	W AA1 N K	W AO1 NG K
 writhe	R IH1 TH	R AY1 TH
 yeah	Y AE1	Y EH1
+yurt	Y UH1 R T	Y ER1 T
 
 
 # removes, odd pronunciations
@@ -39,9 +65,13 @@ dong	D AO1 NG G
 drop	D R AO1 P
 get	G IH1 T
 golf	G AO1 L F
+hertz	HH EH1 R T S
 job	JH OW1 B
 law	L AA1
+leapt	L IY1 P T
+length	L EH1 NG K TH
 lot	L AO1 T
+kept	K AE1 P T
 most	M OW1 S
 next	N EH1 K S
 nice	N IY1 S
@@ -49,9 +79,21 @@ op	AO1 P
 our	AA1 R
 palm	P AA1 M
 psalm	S AA1 M
+raj	R AA1 ZH
+roof	R UH1 F
+soft	S AA1 F T
+strength	S T R EH1 NG K TH
+swamp	S W AO1 M P
+tang	T AA1 NG
 top	T AO1 P
 uh	UH1
 vase	V AA1 Z
 walk	W AA1 K
+waltz	W AO1 L S
 want	W AA1 N T
+watch	W AO1 CH
+welsh	W EH1 L CH
 with	W IH1 DH
+whorl	W AO1 R L
+whorl	HH W AO1 R L
+won	W AA1 N

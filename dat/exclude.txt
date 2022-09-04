@@ -436,7 +436,6 @@ phyle	PRD_EXCL
 pi	PRD_EXCL_FRN
 plack	PRD_EXCL
 plew	PRD_EXCL
-plinth	PRD_EXCL
 plotz	PRD_EXCL
 plough	PRD_EXCL
 poh	PRD_EXCL
@@ -469,6 +468,7 @@ quin	PRD_EXCL
 quire	PRD_EXCL
 quoth	PRD_EXCL
 raff	PRD_EXCL
+ralph	PRD_EXCL_PROPN
 rance	PRD_EXCL
 rase	PRD_EXCL
 rath	PRD_EXCL
