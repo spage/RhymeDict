@@ -320,7 +320,9 @@ klutz	PRD_EXCL_CBL
 kohl	PRD_EXCL
 koss	PRD_EXCL
 kraft	PRD_EXCL_PROPN
+krill	PRD_EXCL_FISH
 kroon	PRD_EXCL
+kraut	PRD_EXCL_FRN
 kvetch	PRD_EXCL_FRN
 kyte	PRD_EXCL
 lac	PRD_EXCL
@@ -516,7 +518,7 @@ schtick	PRD_EXCL_CBL
 schlock	PRD_EXCL_FRN
 schmaltz	PRD_EXCL_FRN
 schmalz	PRD_EXCL_FRN
-schmooze	PRD_EXCL_CBL
+schmooze	PRD_EXCL_CBLb	
 schmuck	PRD_EXCL_FRN
 schnook	PRD_EXCL_FRN
 schul	PRD_EXCL_FRN

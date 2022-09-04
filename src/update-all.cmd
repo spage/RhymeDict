@@ -3,4 +3,4 @@ reduce-filter-dataset.pl
 words-only.pl
 consonant-study.pl
 group-study.pl
-name-study.pl
+rem name-study.pl
