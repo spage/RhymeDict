@@ -1,5 +1,6 @@
 #!perl group-study.pl
 use strict;
+use POSIX qw(ceil);
 
 # group study
 
@@ -52,12 +53,12 @@ my %groupRank;
 my %groupOccurs;
 foreach my $grp (sort keys %phoneGroups){
 	undef my @groupWords;
-	my $freqSum = 0.0;
+	my $freqallWords = 0.0;
 	my $groupCount = 0;
 	my $prevWord = '';
 	foreach my $fword (reverse sort @{$phoneGroups{$grp}}){
 		(my $freq, my $word) = split(/\t/, $fword);
-		$freqSum += $freq;			
+		$freqallWords += $freq;			
 		if (!exists $lookupStop{$word} && $word ne $prevWord){
 			push(@groupWords, $word);
 			$groupCount++;
@@ -68,7 +69,7 @@ foreach my $grp (sort keys %phoneGroups){
 
 	#$groupName = join("\t", $grp, $groupCount, join(",", splice(@groupWords,0,3)));
 	my $groupName = join("\t", $groupCount, $grp, join(",", @groupWords));
-	$groupRank{$groupName} = sprintf("%.12f",$freqSum);
+	$groupRank{$groupName} = sprintf("%.12f",$freqallWords);
 	$groupOccurs{$groupCount}++;
 }
 
@@ -81,11 +82,15 @@ if( !-d '../out') {
 
 # prepare group stats
 open(STAT,'>../out/group-stats.txt');
-my $sum = 0;
+print STAT join("\t", "CNT", "OC", "OCC", "PG", "WC", "WCC") . "\n";
+my $allWords = 0;
+my $allGroups = 0;
 foreach my $groupCount (reverse sort {$a <=> $b} keys %groupOccurs){
 	my $wordCount += $groupCount * $groupOccurs{$groupCount};
-	$sum += $wordCount;
-	print STAT join("\t", $groupCount, $groupOccurs{$groupCount}, $wordCount, $sum) . "\n";
+	$allWords += $wordCount;
+	$allGroups += $groupOccurs{$groupCount};
+	my $pageCount = ceil($allGroups / 4);
+	print STAT join("\t", $groupCount, $groupOccurs{$groupCount}, $allGroups, $pageCount, $wordCount, $allWords) . "\n";
 }
 close(STAT);
 
