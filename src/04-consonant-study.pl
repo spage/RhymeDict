@@ -1,4 +1,4 @@
-#!perl consonant-study.pl
+#!perl 04-consonant-study.pl
 use strict;
 
 # consonant study (TEMP)

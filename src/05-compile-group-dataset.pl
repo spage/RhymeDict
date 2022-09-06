@@ -1,8 +1,8 @@
-#!perl group-study.pl
+#!perl 05-compile-group-dataset.pl
 use strict;
 use POSIX qw(ceil);
 
-# group study
+# build groups
 
 open(STOP,'<../dat/stopwords.txt') ||
 	die 'ERROR: stopwords dataset required';

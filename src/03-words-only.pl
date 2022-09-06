@@ -1,4 +1,4 @@
-#!perl words-only.pl
+#!perl 03-words-only.pl
 use strict;
 
 # word extract (TEMP)

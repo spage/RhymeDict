@@ -1,4 +1,4 @@
-#!perl build-merge-dataset.pl
+#!perl 01-build-merge-dataset.pl
 use strict;
 
 # build valid word lookup

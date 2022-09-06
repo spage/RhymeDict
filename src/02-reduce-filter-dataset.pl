@@ -1,4 +1,4 @@
-#!perl reduce-filter-dataset.pl
+#!perl 02-reduce-filter-dataset.pl
 use strict;
 
 # read list of words to be included (keeps rules simple)
