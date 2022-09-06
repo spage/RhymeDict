@@ -2,6 +2,14 @@
 use strict;
 
 # word extract (TEMP)
+open(STOP,'<../dat/stopwords.txt') ||
+	die 'ERROR: stopwords dataset required';
+my %lookupStop;
+while(<STOP>){
+	chomp;
+	if( /^[a-z]/ ) { $lookupStop{$_}=1 }
+}
+close(STOP);
 
 # create output dataset, check output dir exists
 use File::Path qw( make_path );
@@ -24,7 +32,7 @@ my %wordLookup;
 while(<DATASET>){	
 	chomp;
 	(my $freq, my $reasonCode, my $syb, my $word, my $phones) = split /\t/;
-	next if ($reasonCode ne 'PRD_OK');
+	next if ($reasonCode ne 'PRD_OK' || exists $lookupStop{$word});
 	if(exists $wordLookup{$word}){
 		print HGO "$word\t" . join(':', $wordLookup{$word}, $phones) . "\n" if (!exists $homographs{$word});
 		$homographs{$word}=1;
