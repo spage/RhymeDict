@@ -86,21 +86,17 @@ foreach my $groupCount (reverse sort {$a <=> $b} keys %groupOccurs){
 close(STAT);
 
 
-open(ENDS,'>../out/group-dataset.txt');
+open(GRP,'>../out/group-dataset.txt');
 foreach my $grp (sort keys %phoneGroups){
 	undef my @groupWords;
 	undef my @groupEnds;
 	undef my %ends;
 	my $prevWord = '';
-	foreach my $fword (reverse sort @{$phoneGroups{$grp}}){
-		(my $freq, my $word) = split(/\t/, $fword);
-		if ($word ne $prevWord){
-			#mark stopwords, TEMP?
-			my $stopmark = '';
-			if($lookupStop{$word}){
-				$stopmark = '*';
-			}
-			push(@groupWords, $word . $stopmark);
+	foreach my $freqword (reverse sort @{$phoneGroups{$grp}}){
+		(my $freq, my $word) = split(/\t/, $freqword);
+		if ($word ne $prevWord && !exists($lookupStop{$word})){
+
+			push(@groupWords, $word);			
 			$word =~ /(?<end>(([aeiou].*)|(y[^aeiou]*)))$/;
 			my $end = $+{end};
 
@@ -117,7 +113,7 @@ foreach my $grp (sort keys %phoneGroups){
 	foreach my $end (sort keys %ends){
 		push(@groupEnds, join(':', $end, $ends{$end}));
 	}
-	print ENDS join("\t", $grp, scalar(@groupWords), join(',', @groupWords), join(',', @groupEnds)) . "\n";
+	print GRP join("\t", $grp, scalar(@groupWords), join(',', @groupWords), join(',', @groupEnds)) . "\n";
 }
-close(ENDS);
+close(GRP);
 
