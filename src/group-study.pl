@@ -14,6 +14,17 @@ while(<STOP>){
 close(STOP);
 
 
+open(HG,'<../out/homographs.txt') ||
+	die 'ERROR: homographs dataset required';
+my %lookupHg;
+while(<HG>){
+	chomp;
+	(my $word, undef) = split /\t/;
+	if( /^[a-z]/ ) { $lookupHg{$word}=1 }
+}
+close(HG);
+
+
 open(CONS,'<../out/consonants.txt') ||
 	die 'ERROR: consonants dataset required';
 my %consonants;
@@ -26,9 +37,6 @@ while(<CONS>){
 push(@preCons, split(//,'bcdfghjklmnprstvwxyz'));
 close(CONS);
 
-#foreach my $c (@preCons){
-#	print "$c\n";
-#}
 
 
 # build phone groups
@@ -86,7 +94,10 @@ foreach my $groupCount (reverse sort {$a <=> $b} keys %groupOccurs){
 close(STAT);
 
 
+# output group dataset, compute group ends and group names
 open(GRP,'>../out/group-dataset.txt');
+print GRP "#" . join("\t", "group", "name", "wc", "words", "ends") . "\n";
+my %lookupGroups;
 foreach my $grp (sort keys %phoneGroups){
 	undef my @groupWords;
 	undef my @groupEnds;
@@ -113,7 +124,30 @@ foreach my $grp (sort keys %phoneGroups){
 	foreach my $end (sort keys %ends){
 		push(@groupEnds, join(':', $end, $ends{$end}));
 	}
-	print GRP join("\t", $grp, scalar(@groupWords), join(',', @groupWords), join(',', @groupEnds)) . "\n";
+
+	# choose the first word as default
+	# falls through if a better word is not found
+	my $groupName = $groupWords[0];
+	foreach my $w (@groupWords){
+		# don't choose a stop word
+		next if ($lookupStop{$w});
+		# don't choose a homograph (two prons same sp)
+		next if ($lookupHg{$w});
+		# don't choose a too short word
+		next if (length($w)<3);
+		# don't choose a word already chosen
+		next if ($lookupGroups{$w});
+		# take the first word meeting these criteria
+		$groupName = $w;
+		$lookupGroups{$w}=1;
+		#stop looking
+		last;
+	}
+
+	# drop vowel stress for output
+	$grp =~ s/[012]//g;
+
+	print GRP join("\t", $grp, $groupName, scalar(@groupWords), join(',', @groupWords), join(',', @groupEnds)) . "\n";
 }
 close(GRP);
 
