@@ -25,6 +25,18 @@ while(<HG>){
 close(HG);
 
 
+open(GO,'<../dat/group-over.txt') ||
+	die 'ERROR: group-over dataset required';
+my %groupNameOverrides;
+while(<GO>){
+	chomp;
+	(my $phone, my $override) = split /\t/;
+	if( /^[A-Z]/ ) { $groupNameOverrides{$phone}=$override }
+}
+close(GO);
+
+
+# currently unused, hold for copy/paste to page generation
 open(CONS,'<../out/consonants.txt') ||
 	die 'ERROR: consonants dataset required';
 my %consonants;
@@ -146,6 +158,11 @@ foreach my $grp (sort keys %phoneGroups){
 
 	# drop vowel stress for output
 	$grp =~ s/[012]//g;
+
+	# override group name
+	if( exists($groupNameOverrides{$grp})){
+		$groupName = $groupNameOverrides{$grp};
+	}
 
 	print GRP join("\t", $grp, $groupName, scalar(@groupWords), join(',', @groupWords), join(',', @groupEnds)) . "\n";
 }
