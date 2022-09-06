@@ -3,7 +3,8 @@ TODO
 first pass edits complete
 group file complete
 
-[ ] allow group name substitutions
+[x] allow group name substitutions
+[ ] review group names > 5 words
 [ ] search code for TODO and eliminate
 
 create page documents

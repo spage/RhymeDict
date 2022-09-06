@@ -63,6 +63,7 @@ chalk	CH AA1 K
 current	K ER1 N T
 dong	D AO1 NG G
 drop	D R AO1 P
+fall	F AA1 L
 get	G IH1 T
 golf	G AO1 L F
 hertz	HH EH1 R T S
@@ -77,6 +78,7 @@ next	N EH1 K S
 nice	N IY1 S
 op	AO1 P
 our	AA1 R
+pall	P AA1 L
 palm	P AA1 M
 psalm	S AA1 M
 raj	R AA1 ZH

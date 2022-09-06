@@ -6,6 +6,7 @@ alt	PRD_EXCL
 ane	PRD_EXCL
 ar	PRD_EXCL
 arb	PRD_EXCL
+asp	PRD_EXCL
 auld	PRD_EXCL
 bach	PRD_EXCL_PROPN
 baht	PRD_EXCL
@@ -212,6 +213,7 @@ frere	PRD_EXCL_FRN
 frith	PRD_EXCL
 fyke	PRD_EXCL
 gae	PRD_EXCL
+gaff	PRD_EXCL
 gamp	PRD_EXCL
 gan	PRD_EXCL
 gar	PRD_EXCL
@@ -636,6 +638,7 @@ touche	PRD_EXCL_FRN
 treen	PRD_EXCL
 trey	PRD_EXCL
 trice	PRD_EXCL
+trie	PRD_EXCL
 trig	PRD_EXCL_ABBR
 trine	PRD_EXCL
 troche	PRD_EXCL

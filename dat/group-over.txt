@@ -1,2 +1,37 @@
 # group name overrides
+# mostly artistic license
 AA D	odd
+AA K	rock
+AA M P	swamp
+AA R	star
+AA R T	smart
+AA T	hot
+AE D	bad
+E F	laugh
+AE F T	craft
+AE S K	mask
+AE T	cat
+AH G	bug
+AH L	dull
+AH M	plum
+AH N T	hunt
+AH T	cut
+AO	flaw
+AO G	dog
+AO L	small
+AO N	dawn
+AO NG K	bonk
+AO R	more
+AO R D	chord
+AO R N	torn
+AO R T	sport
+AO S	boss
+AW L	fowl
+AW R	sour
+AW T	shout
+AY	my
+AY P	pipe
+AY S	nice
+AY T	night
+AY Z	wise
+
