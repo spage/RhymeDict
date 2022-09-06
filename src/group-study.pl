@@ -31,9 +31,9 @@ close(CONS);
 #}
 
 
-# read from the filter dataset, build phone groups
+# build phone groups
 open(DATASET,'<../out/filter-dataset.txt') ||
-	die 'ERROR: filter dataset required';
+	die 'ERROR: filter dataset required';	
 my %phoneGroups;
 while(<DATASET>){
 	chomp;
@@ -48,31 +48,6 @@ while(<DATASET>){
 close(DATASET);
 
 
-# gather groups and group rank
-my %groupRank;
-my %groupOccurs;
-foreach my $grp (sort keys %phoneGroups){
-	undef my @groupWords;
-	my $freqallWords = 0.0;
-	my $groupCount = 0;
-	my $prevWord = '';
-	foreach my $fword (reverse sort @{$phoneGroups{$grp}}){
-		(my $freq, my $word) = split(/\t/, $fword);
-		$freqallWords += $freq;			
-		if (!exists $lookupStop{$word} && $word ne $prevWord){
-			push(@groupWords, $word);
-			$groupCount++;
-		}
-		$prevWord = $word;
-	}
-
-
-	#$groupName = join("\t", $grp, $groupCount, join(",", splice(@groupWords,0,3)));
-	my $groupName = join("\t", $groupCount, $grp, join(",", @groupWords));
-	$groupRank{$groupName} = sprintf("%.12f",$freqallWords);
-	$groupOccurs{$groupCount}++;
-}
-
 # create output dataset, check output dir exists
 use File::Path qw( make_path );
 if( !-d '../out') {
@@ -80,7 +55,23 @@ if( !-d '../out') {
 }
 
 
-# prepare group stats
+# gather group stats
+my %groupOccurs;
+foreach my $grp (sort keys %phoneGroups){
+	my $groupCount = 0;
+	my $prevWord = '';
+	foreach my $freqword (reverse sort @{$phoneGroups{$grp}}){
+		(my $freq, my $word) = split(/\t/, $freqword);		
+		if (!exists $lookupStop{$word} && $word ne $prevWord){
+			$groupCount++;
+		}
+		$prevWord = $word;
+	}
+	$groupOccurs{$groupCount}++;
+}
+
+
+# output group stats
 open(STAT,'>../out/group-stats.txt');
 print STAT join("\t", "CNT", "OC", "OCC", "PG", "WC", "WCC") . "\n";
 my $allWords = 0;
@@ -95,7 +86,7 @@ foreach my $groupCount (reverse sort {$a <=> $b} keys %groupOccurs){
 close(STAT);
 
 
-open(ENDS,'>../out/group-ends.txt');
+open(ENDS,'>../out/group-dataset.txt');
 foreach my $grp (sort keys %phoneGroups){
 	undef my @groupWords;
 	undef my @groupEnds;
@@ -126,19 +117,7 @@ foreach my $grp (sort keys %phoneGroups){
 	foreach my $end (sort keys %ends){
 		push(@groupEnds, join(':', $end, $ends{$end}));
 	}
-	print ENDS join("\t", $grp, join(',', @groupWords), join(',', @groupEnds)) . "\n";
+	print ENDS join("\t", $grp, scalar(@groupWords), join(',', @groupWords), join(',', @groupEnds)) . "\n";
 }
 close(ENDS);
 
-open(GRP,'>../out/groups.txt');
-#open(NGRP,'>../out/non-groups.txt');
-foreach my $grp (sort { $groupRank{$b} <=> $groupRank{$a} } keys %groupRank){
-	#next if ($grp =~ /^0\t/);
-	#if($grp =~ /^[123]\t/){
-	#	print NGRP join("\t", $groupRank{$grp}, $grp) . "\n";
-	#} else {
-		print GRP join("\t", $groupRank{$grp}, $grp) . "\n";
-	#}	
-}
-#close(NGRP);
-close(GRP);
