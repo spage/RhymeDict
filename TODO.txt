@@ -1,11 +1,10 @@
 TODO
 
 first pass edits complete
+group file complete
 
-integrate name selection
-remove 1 from phonemes
-build final group file (merge groups, group-ends, names, remove cumm freq)
+[ ] allow group name substitutions
+[ ] search code for TODO and eliminate
 
 create page documents
-
-list consonant words with small groups decide whether to edit out!
+develop word page template
