@@ -34,4 +34,39 @@ AY P	pipe
 AY S	nice
 AY T	night
 AY Z	wise
-
+EH D	bed
+EH G	egg
+EH K S	flex
+EH M	gem
+EH N	ten
+EH R	fair
+EH T	pet
+ER JH	purge
+ER T	flirt
+EY	may
+EY L	scale
+EY N T	paint
+IH B	crib
+IH D	squid
+IH G	pig
+IH K	quick
+IH M	swim
+IH N	win
+IH N T	mint
+IH R	clear
+IH S	kiss
+IH T	kit
+IH Z	whiz
+IY CH	beach
+IY K	creek
+IY L	wheel
+IY N	green
+IY Z	cheese
+OW	show
+OW L D	gold
+OW Z	rose
+UH D	good
+UW	true
+UW N	moon
+UW S	goose
+UW T	cute
