@@ -1,11 +1,11 @@
-TODO
 
 first pass edits complete
 group file complete
 
 [x] allow group name substitutions
-[ ] review group names > 5 words
-[ ] search code for TODO and eliminate
+[x] review group names > 5 words
+[x] TODO in build-merge
+[x] exclude ba,ya,yah?
 
 create page documents
 develop word page template

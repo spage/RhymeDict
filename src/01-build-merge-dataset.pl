@@ -80,13 +80,7 @@ while(<CMUDIC>){
 		# discard non-words 
 		if(exists $wordLookup{$word} ){
 			# append pronunciation
-			if(exists $phoneLookup{$word}){
-				#TODO: replace this if with code from group study below
-				#push @{$phoneLookup{$word}}, $phones
-				$phoneLookup{$word} = $phoneLookup{$word} . ':' . $phones;
-			}else{
-				$phoneLookup{$word} = $phones;
-			}
+			push @{$phoneLookup{$word}}, $phones;
 		}
 	}
 }
@@ -100,8 +94,8 @@ if( -e $dictFileAdds ){
 		chomp;
 		if( /^[A-Z]/ ){
 			(my $word, my $phones) = split /\s\s/;
-			$word =~ tr/A-Z/a-z/;
-			$phoneLookup{$word} = $phones;
+			$word =~ tr/A-Z/a-z/;			
+			push @{$phoneLookup{$word}}, $phones;
 		}
 	}
 	close(WORDS);
@@ -125,18 +119,14 @@ foreach my $word (sort @allWords){
 		print OUT join("\t", $freq, $reasonCode, $word) . "\n";
 	}
 
-	my $phones = $phoneLookup{$word};
-	if($reasonCode eq 'PRD_OK' && !defined($phones)){
+	if($reasonCode eq 'PRD_OK' && !defined($phoneLookup{$word})){
 		$reasonCode = 'PRD_DICT';
 		print OUT join("\t", $freq, $reasonCode, $word) . "\n";
 	}
 
 	# write each pronunciation on its own line
 	if($reasonCode eq 'PRD_OK'){
-		foreach my $phone (split(':',$phones)){
-		#TODO replace above with code from group
-		#foreach my $phone (@{$phoneLookup{$word}})
-			# count syllables as vowel phones count (012 marks vowels)
+		foreach my $phone (@{$phoneLookup{$word}}){
 			my $syllableCount = $phone =~ tr/012//;
 			my $syb = 'SYB_' . $syllableCount;
 			print OUT join("\t", $freq, $reasonCode, $syb, $word, $phone) . "\n";
