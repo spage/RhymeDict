@@ -1,3 +1,4 @@
+ab	PRD_EXCL_PRE
 ae	PRD_EXCL
 ag	PRD_EXCL
 ai	PRD_EXCL
@@ -19,10 +20,13 @@ bast	PRD_EXCL
 bate	PRD_EXCL
 batt	PRD_EXCL
 beaux	PRD_EXCL_FRN
+beck	PRD_EXCL_FRN
+ben	PRD_EXCL_FRN
 benne	PRD_EXCL
 berg	PRD_EXCL
 beth	PRD_EXCL
 bey	PRD_EXCL
+bi	PRD_EXCL_PRE
 bibb	PRD_EXCL
 bice	PRD_EXCL
 bier	PRD_EXCL_FRN
@@ -45,6 +49,7 @@ borsch	PRD_EXCL
 borscht	PRD_EXCL_FRN
 bort	PRD_EXCL
 bortz	PRD_EXCL
+bosh	PRD_EXCL_FRN
 bott	PRD_EXCL
 boule	PRD_EXCL_FRN
 bourg	PRD_EXCL_FRN
@@ -141,6 +146,7 @@ dace	PRD_EXCL
 dag	PRD_EXCL
 dahl	PRD_EXCL_PROPN
 dais	PRD_EXCL
+dak	PRD_EXCL
 dal	PRD_EXCL
 daube	PRD_EXCL_ALTSP
 daw	PRD_EXCL
@@ -167,6 +173,7 @@ dorr	PRD_EXCL
 doss	PRD_EXCL
 dost	PRD_EXCL_FRN
 doth	PRD_EXCL_FRN
+dow	PRD_EXCL
 dower	PRD_EXCL
 dray	PRD_EXCL
 drogue	PRD_EXCL
@@ -202,6 +209,7 @@ fisc	PRD_EXCL_ABBR
 fjeld	PRD_EXCL_FRN
 fjord	PRD_EXCL_FRN
 flak	PRD_EXCL
+flam	PRD_EXCL
 fleer	PRD_EXCL
 floc	PRD_EXCL
 forte	PRD_EXCL_ALTSP
@@ -213,6 +221,7 @@ fremd	PRD_EXCL_FRN
 frere	PRD_EXCL_FRN
 frith	PRD_EXCL
 fyke	PRD_EXCL
+gad	PRD_EXCL
 gae	PRD_EXCL
 gaff	PRD_EXCL
 gamp	PRD_EXCL
@@ -225,6 +234,7 @@ geck	PRD_EXCL
 gen	PRD_EXCL_ABBR
 gest	PRD_EXCL
 ghee	PRD_EXCL_FRN
+gib	PRD_EXCL
 girt	PRD_EXCL
 giv	PRD_EXCL
 glace	PRD_EXCL
@@ -250,7 +260,9 @@ halm	PRD_EXCL
 hance	PRD_EXCL
 hao	PRD_EXCL
 hap	PRD_EXCL
+hast	PRD_EXCL_FRN
 harl	PRD_EXCL
+hart	PRD_EXCL
 hath	PRD_EXCL
 haugh	PRD_EXCL
 haut	PRD_EXCL_FRN
@@ -277,6 +289,7 @@ howe	PRD_EXCL_PROPN
 howk	PRD_EXCL
 hoy	PRD_EXCL
 hoyle	PRD_EXCL
+hun	PRD_EXCL_FRN
 hurst	PRD_EXCL
 hwan	PRD_EXCL_FRN
 ich	PRD_EXCL_FRN
@@ -329,6 +342,7 @@ kraut	PRD_EXCL_FRN
 kvetch	PRD_EXCL_FRN
 kyte	PRD_EXCL
 lac	PRD_EXCL
+lade	PRD_EXCL
 laird	PRD_EXCL
 lall	PRD_EXCL
 lang	PRD_EXCL_ABBR
@@ -343,6 +357,7 @@ lev	PRD_EXCL_PROPN
 ley	PRD_EXCL
 li	PRD_EXCL_PROPN
 liang	PRD_EXCL_PROPN
+lib	PRD_EXCL_ABBR
 lich	PRD_EXCL
 licht	PRD_EXCL_FRN
 lief	PRD_EXCL_PROPN
@@ -360,12 +375,14 @@ lour	PRD_EXCL
 lowe	PRD_EXCL
 lown	PRD_EXCL
 luce	PRD_EXCL
+luff	PRD_EXCL
 lum	PRD_EXCL
 lunt	PRD_EXCL
 lutz	PRD_EXCL_PROPN
 mabe	PRD_EXCL
 mache	PRD_EXCL
 mae	PRD_EXCL
+mag	PRD_EXCL_ABBR
 maile	PRD_EXCL_FRN
 mair	PRD_EXCL
 malm	PRD_EXCL_FRN
@@ -377,6 +394,7 @@ masse	PRD_EXCL
 matt	PRD_EXCL_PROPN
 maud	PRD_EXCL_PROPN
 maund	PRD_EXCL
+med	PRD_EXCL_ABBR
 mel	PRD_EXCL_PROPN
 mell	PRD_EXCL
 merk	PRD_EXCL
@@ -412,6 +430,7 @@ myrrh	PRD_EXCL
 na	PRD_EXCL
 nam	PRD_EXCL
 nance	PRD_EXCL_PROPN
+narc	PRD_EXCL_ABBR
 nard	PRD_EXCL
 ne	PRD_EXCL
 nee	PRD_EXCL
@@ -423,9 +442,11 @@ nill	PRD_EXCL
 noh	PRD_EXCL
 nom	PRD_EXCL_FRN
 nome	PRD_EXCL
+non	PRD_EXCL_PRE
 nth	PRD_EXCL
 nu	PRD_EXCL
 oeuvre	PRD_EXCL_FRN
+op	PRD_EXCL_ABBR
 ort	PRD_EXCL
 ose	PRD_EXCL
 pac	PRD_EXCL
@@ -478,6 +499,7 @@ quoth	PRD_EXCL
 raff	PRD_EXCL
 ralph	PRD_EXCL_PROPN
 rance	PRD_EXCL
+rand	PRD_EXCL_FRN
 rase	PRD_EXCL
 rath	PRD_EXCL
 rathe	PRD_EXCL
@@ -487,7 +509,10 @@ rec	PRD_EXCL
 reck	PRD_EXCL
 redd	PRD_EXCL_PROPN
 ree	PRD_EXCL
+reg	PRD_EXCL
 reif	PRD_EXCL
+rem	PRD_EXCL
+rep	PRD_EXCL_ABBR
 repp	PRD_EXCL
 resh	PRD_EXCL
 ret	PRD_EXCL
@@ -502,6 +527,7 @@ roose	PRD_EXCL
 roque	PRD_EXCL
 routh	PRD_EXCL
 roux	PRD_EXCL_FRN
+ruck	PRD_EXCL
 rudd	PRD_EXCL_PROPN
 rusk	PRD_EXCL
 ruth	PRD_EXCL_PROPN
@@ -513,6 +539,7 @@ sark	PRD_EXCL
 saul	PRD_EXCL_PROPN
 sault	PRD_EXCL
 scad	PRD_EXCL
+scape	PRD_EXCL
 scarp	PRD_EXCL
 schist	PRD_EXCL
 schlep	PRD_EXCL_CBL
@@ -574,6 +601,7 @@ sous	PRD_EXCL_FRN
 spake	PRD_EXCL
 spall	PRD_EXCL
 spang	PRD_EXCL
+spec	PRD_EXCL_ABBR
 speer	PRD_EXCL_PROPN
 speir	PRD_EXCL_PROPN
 speltz	PRD_EXCL_FRN
@@ -583,6 +611,7 @@ spurge	PRD_EXCL
 sri	PRD_EXCL
 stade	PRD_EXCL
 staph	PRD_EXCL
+stat	PRD_EXCL_ABBR
 stet	PRD_EXCL
 stipe	PRD_EXCL
 stoup	PRD_EXCL
@@ -605,6 +634,8 @@ taj	PRD_EXCL
 tam	PRD_EXCL
 tao	PRD_EXCL_FRN
 tass	PRD_EXCL
+tat	PRD_EXCL
+tate	PRD_EXCL_PROPN
 ted	PRD_EXCL_PROPN
 tel	PRD_EXCL_ABBR
 tench	PRD_EXCL
@@ -651,6 +682,7 @@ trull	PRD_EXCL
 trying	PRD_EXCL
 tung	PRD_EXCL
 turk	PRD_EXCL_PROPN
+twain	PRD_EXCL
 tye	PRD_EXCL
 tyne	PRD_EXCL
 umm	PRD_EXCL
@@ -669,6 +701,7 @@ wark	PRD_EXCL
 wat	PRD_EXCL
 waugh	PRD_EXCL
 wecht	PRD_EXCL
+wen	PRD_EXCL_FRN
 wert	PRD_EXCL
 whang	PRD_EXCL_ALTSP
 whig	PRD_EXCL_ALTSP
@@ -696,5 +729,7 @@ yew	PRD_EXCL_TREE
 yin	PRD_EXCL
 yom	PRD_EXCL
 youse	PRD_EXCL
+zed	PRD_EXCL_FRN
 zee	PRD_EXCL
 zill	PRD_EXCL
+zine	PRD_EXCL

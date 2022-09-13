@@ -9,3 +9,6 @@ group file complete
 
 create page documents
 develop word page template
+
+[ ] homographs page with pairs (need,read : bed,read)
+[ ] investigate homophones page also
