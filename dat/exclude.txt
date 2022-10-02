@@ -231,6 +231,7 @@ garth	PRD_EXCL_PROPN
 gast	PRD_EXCL_FRN
 gault	PRD_EXCL
 geck	PRD_EXCL
+geez	PRD_EXCL_OFF
 gen	PRD_EXCL_ABBR
 gest	PRD_EXCL
 ghee	PRD_EXCL_FRN
@@ -296,8 +297,10 @@ ich	PRD_EXCL_FRN
 jake	PRD_EXCL_PROPN
 jane	PRD_EXCL_PROPN
 jee	PRD_EXCL
+jeez	PRD_EXCL_OFF
 jess	PRD_EXCL_PROPN
 jill	PRD_EXCL_PROPN
+jin	PRD_EXCL_FRN
 jo	PRD_EXCL_PROPN
 joe	PRD_EXCL_PROPN
 john	PRD_EXCL_PROPN
@@ -403,6 +406,7 @@ merle	PRD_EXCL
 meth	PRD_EXCL_ABBR
 mi	PRD_EXCL
 mib	PRD_EXCL
+mick	PRD_EXCL
 mig	PRD_EXCL
 milch	PRD_EXCL
 mille	PRD_EXCL
@@ -548,7 +552,7 @@ schtick	PRD_EXCL_CBL
 schlock	PRD_EXCL_FRN
 schmaltz	PRD_EXCL_FRN
 schmalz	PRD_EXCL_FRN
-schmooze	PRD_EXCL_CBLb	
+schmooze	PRD_EXCL_CBL	
 schmuck	PRD_EXCL_FRN
 schnook	PRD_EXCL_FRN
 schul	PRD_EXCL_FRN
@@ -587,6 +591,7 @@ shute	PRD_EXCL
 si	PRD_EXCL
 sib	PRD_EXCL
 sic	PRD_EXCL
+sim	PRD_EXCL_ABBR
 sipe	PRD_EXCL
 skeen	PRD_EXCL
 skein	PRD_EXCL

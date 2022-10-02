@@ -6,9 +6,13 @@ group file complete
 [x] review group names > 5 words
 [x] TODO in build-merge
 [x] exclude ba,ya,yah?
+[ ] complete villas edit pass
+[ ] edit 5-1 word lists
 
 create page documents
 develop word page template
 
 [ ] homographs page with pairs (need,read : bed,read)
 [ ] investigate homophones page also
+
+

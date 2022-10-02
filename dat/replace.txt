@@ -6,6 +6,7 @@ blithe	B L AY1 DH	B L AY1 TH
 blotch	B L AA1 T CH	B L AA1 CH
 bong	B AA1 NG	B AO1 NG
 bonk	B AA1 NG K	B AO1 NG K
+clique	K L IY1 K	K L IH1 K
 cog	K AO1 G	K AA1 G
 conk	K AA1 NG K	K AO1 NG K
 corps	K AO1 R Z	K AO1 R
@@ -22,6 +23,7 @@ hon	HH AA1 N	HH AH1 N
 hoss	HH AA1 S	HH AO1 S
 lithe	L AY1 DH	L AY1 TH
 mensch	M EH1 N SH	M EH1 N CH
+mic	M IH1 K	M AY1 K
 mod	M AO1 D	M AA1 D
 naw	N AA1	N AO1
 poor	P UW1 R	P AO1 R
@@ -81,12 +83,14 @@ next	N EH1 K S
 nice	N IY1 S
 op	AO1 P
 our	AA1 R
+ow	OW1
 pall	P AA1 L
 palm	P AA1 M
 prayer	P R EH1 R
 psalm	S AA1 M
 raj	R AA1 ZH
 roof	R UH1 F
+scythe	S IH1 TH
 skier	S K AY1 R
 soft	S AA1 F T
 strength	S T R EH1 NG K TH
@@ -102,6 +106,9 @@ want	W AA1 N T
 watch	W AO1 CH
 welsh	W EH1 L CH
 with	W IH1 DH
+when	HH W EH1 N
+when	W IH1 N
+when	HH W IH1 N
 whorl	W AO1 R L
 whorl	HH W AO1 R L
 won	W AA1 N
