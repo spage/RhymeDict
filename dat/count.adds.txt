@@ -61,6 +61,7 @@ jilt	19312
 jowl	46104
 jut	89412
 jynx	38035
+kneed	71162
 kvetch	65000
 letch	23741
 lilt	84283

@@ -1,3 +1,4 @@
+#PRD_EXCL_STOP
 # non-child-appropriate, #sometimes
 # processing includes these words for stats, omits from output
 bitch

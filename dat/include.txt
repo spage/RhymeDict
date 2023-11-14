@@ -1,4 +1,4 @@
-# -s rule exceptions
+#PRD_INCLUDE_S_RULE_EXCEPTION
 as
 bus
 corps
@@ -18,7 +18,7 @@ us
 was
 yes
 
-# -ed rule exceptions
+#PRD_INCLUDE_ED_RULE_EXCEPTION
 bed
 bled
 bleed
@@ -31,6 +31,7 @@ feed
 fled
 greed
 heed
+kneed
 led
 med
 need

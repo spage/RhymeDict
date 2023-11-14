@@ -1,4 +1,4 @@
-# replacements for pronunciations
+#PRD_REPLACE_PRON
 ankh	AE1 N K	AO1 NG K
 been	B IH1 N	B EH1 N
 beige	B EY1 ZH	B EY1 JH
@@ -51,7 +51,7 @@ yeah	Y AE1	Y EH1
 yurt	Y UH1 R T	Y ER1 T
 
 
-# removes, odd pronunciations
+#PRD_EXCLUDE_PRON
 as	EH1 Z
 awe	AA1
 balk	B AA1 L K
@@ -93,8 +93,10 @@ roof	R UH1 F
 scythe	S IH1 TH
 skier	S K AY1 R
 soft	S AA1 F T
+spawn	S P AA1 N
 strength	S T R EH1 NG K TH
 swamp	S W AO1 M P
+swan	S W AO1 N
 tang	T AA1 NG
 top	T AO1 P
 tsar	T S AA1 R
