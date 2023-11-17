@@ -3,6 +3,7 @@
 # processing includes these words for stats, omits from output
 bitch
 boob
+chink
 cock
 cooch
 coon
@@ -18,6 +19,7 @@ fuck
 gook
 pimp
 piss
+porn
 puss
 rape
 shat
@@ -25,6 +27,7 @@ shit
 slut
 sperm
 tit
+toke
 twat
 wang
 wank

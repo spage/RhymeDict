@@ -6,7 +6,8 @@ group file complete
 [x] review group names > 5 words
 [x] TODO in build-merge
 [x] exclude ba,ya,yah?
-[ ] complete villas edit pass
+[x] complete villas edit pass
+		1[x] 2[x] 3[x] 4[x] 5[x] 6[x] 7[x] 8[x]
 [ ] edit 5-1 word lists
 
 create page documents
@@ -14,5 +15,22 @@ develop word page template
 
 [ ] homographs page with pairs (need,read : bed,read)
 [ ] investigate homophones page also
+[ ] cod c.o.d bug cod, fop, dak occurs when SYB_2 or 3 exists with same SYB_1 word
+[ ] revisit two blog, (flog, snog)missing, log, dog, hog, fog lists    laahg   lawg are the two lists
+[ ] wind blows, wind clock, wound clock, fresh wound - striking examples of single word groups under certain pron
+[ ] observation catchy pattern base + suffix => base zipp-y-quip, slink-y-mink, brief-ly chief
+
+compact storage thoughts
+map,cap,gap,app,wrap,strap,rap,tap,snap,sap,trap,crap,lap,scrap,flap,chap,nap,slap,pap,clap,zap,yap,frap 104 - 100% - 65 - 63%
+1ap,2app,m1,c1,g1,2,wr1,str1,r1,t1,sn1,s1,tr1,cr1,l1,scr1,fl1,ch1,n1,sl1,p1,cl1,z1,y1,fr1 89 - 86% - 56 - 54%
+ap,1app,m,c,g,1,wr,str,r,t,sn,s,tr,cr,l,scr,fl,ch,n,sl,p,cl,z,y,fr 66 - 64% - 42 - 41%
+
+NOTE MY has 10 SUFFIXES prolly max. TRUE has 12 suffixes
+SO do SUFFIXES NO numbers, suffix list separator, use numbers > 0 as above
+SORT SUFFIXES DEFINITELY BY ORDER OF USAGE in MY list -y has 18 of the 39 words
+that many suffixes blows my bit budget no  5 bit compress 32 - (a-z 26) = 6 - (1 sep) = 5 - (1 ain't) = 4
+...so use 6 bits, pack and hexencode datablock
 
 
+Start with about 7500 one syb words worked down to 3500
+start with abuot 16000 two syb words, two will be quite a challenge!

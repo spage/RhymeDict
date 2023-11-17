@@ -86,7 +86,6 @@ our	AA1 R
 ow	OW1
 pall	P AA1 L
 palm	P AA1 M
-prayer	P R EH1 R
 psalm	S AA1 M
 raj	R AA1 ZH
 roof	R UH1 F

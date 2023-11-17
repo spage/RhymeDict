@@ -10,6 +10,7 @@ ar	PRD_EXCL
 arb	PRD_EXCL
 asp	PRD_EXCL
 auld	PRD_EXCL
+ay	PRD_EXCL_ALTSP
 ba	PRD_EXCL
 bach	PRD_EXCL_PROPN
 baht	PRD_EXCL
@@ -43,6 +44,8 @@ bo	PRD_EXCL
 boart	PRD_EXCL
 boche	PRD_EXCL_FRN
 bock	PRD_EXCL
+bole	PRD_EXCL
+boll	PRD_EXCL
 bonne	PRD_EXCL_FRN
 boor	PRD_EXCL
 borne	PRD_EXCL_ALTSP
@@ -72,6 +75,7 @@ brent	PRD_EXCL
 brie	PRD_EXCL_FRN
 brill	PRD_EXCL
 brin	PRD_EXCL
+brit	PRD_EXCL_PROPN
 britt	PRD_EXCL
 brock	PRD_EXCL
 brose	PRD_EXCL
@@ -80,6 +84,7 @@ brut	PRD_EXCL
 buhl	PRD_EXCL_FRN
 buhr	PRD_EXCL_FRN
 bund	PRD_EXCL_FRN
+bung	PRD_EXCL_BRDRLN
 bunn	PRD_EXCL
 bur	PRD_EXCL
 burd	PRD_EXCL
@@ -142,6 +147,7 @@ cripe	PRD_EXCL
 crosse	PRD_EXCL
 crouse	PRD_EXCL
 cruse	PRD_EXCL
+cur	PRD_EXCL_BRDRLN
 cusk	PRD_EXCL
 czar	PRD_EXCL_CBL
 dace	PRD_EXCL
@@ -214,6 +220,7 @@ flak	PRD_EXCL
 flam	PRD_EXCL
 fleer	PRD_EXCL
 floc	PRD_EXCL
+fop	PRD_EXCL_BRDRLN
 forte	PRD_EXCL_ALTSP
 foss	PRD_EXCL
 fosse	PRD_EXCL
@@ -353,6 +360,7 @@ lall	PRD_EXCL
 lang	PRD_EXCL_ABBR
 lar	PRD_EXCL
 lat	PRD_EXCL_ABBR
+lave	PRD_EXCL
 lech	PRD_EXCL
 leet	PRD_EXCL_ABBR
 lehr	PRD_EXCL_FRN
@@ -463,6 +471,7 @@ pash	PRD_EXCL
 peart	PRD_EXCL
 pease	PRD_EXCL
 pech	PRD_EXCL
+pent	PRD_EXCL_BRDRLN
 perse	PRD_EXCL
 phage	PRD_EXCL_ABBR
 phi	PRD_EXCL_FRN
@@ -500,6 +509,7 @@ quant	PRD_EXCL_ABBR
 quay	PRD_EXCL_ALTSP
 quid	PRD_EXCL_FRN
 quin	PRD_EXCL
+quint	PRD_EXCL_BRDRLN
 quire	PRD_EXCL
 quoth	PRD_EXCL
 raff	PRD_EXCL
@@ -603,12 +613,12 @@ sloe	PRD_EXCL
 smit	PRD_EXCL_PROPN
 snell	PRD_EXCL
 soave	PRD_EXCL
+sot	PRD_EXCL_BRDRLN
 souk	PRD_EXCL
 sous	PRD_EXCL_FRN
 spake	PRD_EXCL
 spall	PRD_EXCL
 spang	PRD_EXCL
-spec	PRD_EXCL_ABBR
 speer	PRD_EXCL_PROPN
 speir	PRD_EXCL_PROPN
 speltz	PRD_EXCL_FRN
@@ -618,7 +628,6 @@ spurge	PRD_EXCL
 sri	PRD_EXCL
 stade	PRD_EXCL
 staph	PRD_EXCL
-stat	PRD_EXCL_ABBR
 stet	PRD_EXCL
 stipe	PRD_EXCL
 stoup	PRD_EXCL
@@ -641,7 +650,6 @@ taj	PRD_EXCL
 tam	PRD_EXCL
 tao	PRD_EXCL_FRN
 tass	PRD_EXCL
-tat	PRD_EXCL
 tate	PRD_EXCL_PROPN
 ted	PRD_EXCL_PROPN
 tel	PRD_EXCL_ABBR
