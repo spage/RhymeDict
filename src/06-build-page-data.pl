@@ -15,6 +15,12 @@ while(<DATASET>){
 	# only build for pages with more than 5 words
 	next if ($wc =~ /^[12345]$/);
 	
+	# only build for pages with 2-5 words
+	#next unless ($wc =~ /^[2345]$/);
+
+	# only build for pages with 1 word
+	#next unless ($wc =~ /^1$/);
+
 	print join("\t", $name . "(" . $wc . ")", $words) . "\n";
 }
 close(DATASET);
