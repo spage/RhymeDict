@@ -6,6 +6,9 @@ die 'ERROR: specify target word' unless (@ARGV eq 1);
 my $targetWord = $ARGV[0];
 
 # start Banner, absolutely frivilous, delete 
+# to install with strawberry perl use 
+# "C:\Strawberry\perl\bin\cpan.bat"
+# cpan> install Text::Banner
 use Text::Banner;
 my $ban = Text::Banner->new();
 $ban->set($targetWord);
@@ -143,7 +146,7 @@ while(<STOP>){
 	chomp;
 	if( /^[a-z]/ ) 
 	{ 
-		print "Stopword:Yes\n" if ($_ eq $targetWord);
+		print "Stopword:PRD_EXCL_STOP\n" if ($_ eq $targetWord);
 	}
 }
 close(STOP);
