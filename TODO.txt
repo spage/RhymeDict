@@ -8,7 +8,8 @@ group file complete
 [x] exclude ba,ya,yah?
 [x] complete villas edit pass
 		1[x] 2[x] 3[x] 4[x] 5[x] 6[x] 7[x] 8[x]
-[ ] edit 5-1 word lists
+[ ] edit 5-2 word lists
+[x] edit 1 word lists
 
 create page documents
 develop word page template

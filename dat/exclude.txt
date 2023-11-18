@@ -584,6 +584,7 @@ sere	PRD_EXCL
 serge	PRD_EXCL
 sha	PRD_EXCL
 shad	PRD_EXCL_FISH
+shalt	PRD_EXCL
 shaul	PRD_EXCL
 shawn	PRD_EXCL_PROPN
 shay	PRD_EXCL
@@ -716,10 +717,12 @@ wark	PRD_EXCL
 wat	PRD_EXCL
 waugh	PRD_EXCL
 wecht	PRD_EXCL
+welsh	PRD_EXCL
 wen	PRD_EXCL_FRN
 wert	PRD_EXCL
 whang	PRD_EXCL_ALTSP
 whig	PRD_EXCL_ALTSP
+whilst	PRD_EXCL
 whit	PRD_EXCL
 wich	PRD_EXCL
 wiss	PRD_EXCL
@@ -727,6 +730,7 @@ wist	PRD_EXCL
 withe	PRD_EXCL
 wo	PRD_EXCL
 wold	PRD_EXCL
+wont	PRD_EXCL
 wop	PRD_EXCL
 wren	PRD_EXCL_FOWL
 wye	PRD_EXCL

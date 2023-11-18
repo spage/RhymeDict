@@ -65,10 +65,13 @@ caught	K AA1 T
 caulk	K AA1 K
 cause	K AA1 Z
 chalk	CH AA1 K
+cost	K AA1 S T
 current	K ER1 N T
 dong	D AO1 NG G
 drop	D R AO1 P
+eighth	EY1 T TH
 fall	F AA1 L
+fifth	F IH1 F TH
 get	G IH1 T
 golf	G AO1 L F
 hertz	HH EH1 R T S
@@ -78,6 +81,7 @@ leapt	L IY1 P T
 length	L EH1 NG K TH
 lot	L AO1 T
 kept	K AE1 P T
+mosque	M AO1 S K
 most	M OW1 S
 next	N EH1 K S
 nice	N IY1 S
@@ -96,6 +100,7 @@ spawn	S P AA1 N
 strength	S T R EH1 NG K TH
 swamp	S W AO1 M P
 swan	S W AO1 N
+swathe	S W AA1 DH
 tang	T AA1 NG
 top	T AO1 P
 tsar	T S AA1 R
