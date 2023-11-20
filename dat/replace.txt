@@ -7,9 +7,9 @@ blotch	B L AA1 T CH	B L AA1 CH
 bong	B AA1 NG	B AO1 NG
 bonk	B AA1 NG K	B AO1 NG K
 clique	K L IY1 K	K L IH1 K
-cog	K AO1 G	K AA1 G
 conk	K AA1 NG K	K AO1 NG K
 corps	K AO1 R Z	K AO1 R
+dah	D AH1	D AA1
 duel	D UW1 AH0 L	D UW1 L
 ear	IY1 R	IH1 R
 floss	F L AA1 S	F L AO1 S
@@ -80,6 +80,7 @@ law	L AA1
 leapt	L IY1 P T
 length	L EH1 NG K TH
 lot	L AO1 T
+lox	L AH1 K S
 kept	K AE1 P T
 mosque	M AO1 S K
 most	M OW1 S
@@ -104,6 +105,7 @@ swathe	S W AA1 DH
 tang	T AA1 NG
 top	T AO1 P
 tsar	T S AA1 R
+tryst	T R AY1 S T
 uh	UH1
 vase	V AA1 Z
 walk	W AA1 K

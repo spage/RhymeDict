@@ -206,6 +206,7 @@ fain	PRD_EXCL
 fane	PRD_EXCL
 fay	PRD_EXCL
 feck	PRD_EXCL_FRN
+feist	PRD_EXCL
 femme	PRD_EXCL_FRN
 fer	PRD_EXCL_FRN
 fess	PRD_EXCL
@@ -316,6 +317,7 @@ john	PRD_EXCL_PROPN
 joss	PRD_EXCL_PROPN
 jun	PRD_EXCL
 jus	PRD_EXCL
+jynx	PRD_EXCL
 ka	PRD_EXCL
 kail	PRD_EXCL
 kain	PRD_EXCL_PROPN
@@ -427,6 +429,7 @@ mir	PRD_EXCL
 mo	PRD_EXCL
 moke	PRD_EXCL
 mol	PRD_EXCL
+moll	PRD_EXCL
 mon	PRD_EXCL
 monde	PRD_EXCL_FRN
 mor	PRD_EXCL
@@ -538,6 +541,7 @@ riel	PRD_EXCL
 rill	PRD_EXCL
 roc	PRD_EXCL
 rolf	PRD_EXCL_PROPN
+rom	PRD_EXCL_ABBR
 rood	PRD_EXCL
 roose	PRD_EXCL
 roque	PRD_EXCL
@@ -614,6 +618,7 @@ sloe	PRD_EXCL
 smit	PRD_EXCL_PROPN
 snell	PRD_EXCL
 soave	PRD_EXCL
+sol	PRD_EXCL_PROPN
 sot	PRD_EXCL_BRDRLN
 souk	PRD_EXCL
 sous	PRD_EXCL_FRN
@@ -677,6 +682,7 @@ tod	PRD_EXCL
 toff	PRD_EXCL
 toft	PRD_EXCL
 tole	PRD_EXCL
+tom	PRD_EXCL_PROPN
 tonne	PRD_EXCL_ALTSP
 tope	PRD_EXCL
 tor	PRD_EXCL
