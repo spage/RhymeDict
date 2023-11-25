@@ -120,11 +120,14 @@ foreach my $grp (sort keys %phoneGroups){
 		if ($word ne $prevWord && !exists($lookupStop{$word})){
 
 			push(@groupWords, $word);			
-			$word =~ /(?<end>(([aeiou].*)|(y[^aeiou]*)))$/;
+			$word =~ /(?<end>(([aeiou].*)|(y[^aeiou]*)|(y[klmprt]?h?e)))$/;
 			my $end = $+{end};
 
 			if( $word =~ /^s?qu/ ){
 				#squ qu special case, ignore u
+				$ends{'-'. substr($end,1)}++;
+			}elsif ( $word =~ /^[bg]u[aei]/ ){
+				#gu special case when vowel follows bu, gu (guess yields -ess not -uess)
 				$ends{'-'. substr($end,1)}++;
 			}else{
 				$ends{'-'. $end}++;
